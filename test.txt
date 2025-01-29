@@ -1,4 +1,9 @@
 what to type in the terminal in order to extract the changes made in the project and apply the changes you made.
 
+every time add new file/modify file:
+git add .
+git commit -m (message you want to type)
 git push - adds whatever changes you made into the repository in GitHub
+
+refresh changes repo before push:
 git pull - takes out whatever changes were made in the Github
