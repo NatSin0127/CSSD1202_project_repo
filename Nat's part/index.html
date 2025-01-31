@@ -1,24 +1,124 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset ="UTF-8">
-        <meta name = "viewport" content="width=device-width initial scale = 1.0">
         <Title>Eco-life Homepage</Title>
+        <meta charset ="utf-8">
+        <meta name = "viewport" content="width=device-width initial scale = 1.0">
+        <style>
+            body{
+                background-color: rgb(157, 225, 242);
+                font-family:monospace;
+                color: rgb(39, 120, 218);
+            }
+            nav{
+                padding: 2px;
+                padding-left: 3%;
+                color: beige;
+                font-weight: bolder;
+                font-size: 16px;
+            }
+            main {
+                padding: 2%;
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+            footer{
+                padding-left: 2%;
+            }
+            div{
+                padding: 2%;
+                padding-left: 5%;
+                background-color: rgb(69, 196, 216);
+                color: beige;
+                width: 70%;
+                margin: auto;
+            }
+            dt{
+                font-size: x-large;
+            }
+            dd{
+                font-size: large;
+            }
+            a {
+                color: inherit;
+            }
+        </style>
     </head>
     <body>
         <header>
-			<h1>Eco-life</h1>
+			<h1 style="padding-left: 2%;">Eco-life</h1>
 		</header>
-        <nav>
-            <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
-			<!--<a href="images.html">Images</a>&nbsp;&nbsp;&nbsp;&nbsp;-->
-			<!--<a href="https://www.destinationontario.com/">Ontario Tourism</a>-->
+        <nav style="background-color: rgb(6, 141, 185);">
+            <p>
+                <a href="about.html" target="_blank">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="contact.html" target="_blank">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+            </p>
+        </nav>
+        <nav style="background-color: rgb(26, 110, 156);">
+            <p>
+                Home &nbsp;&nbsp;&#11166;&nbsp;&nbsp;&nbsp;
+                <a href="#s1">Introduction</a> &nbsp;&nbsp;&nbsp;
+                <a href="#s2">Features</a> &nbsp;&nbsp;&nbsp;
+                <a href="#s3">FAQ</a> &nbsp;&nbsp;&nbsp;
+            </p>
         </nav>
         <main>
-            <p>This is the homepage of Eco-life.</p>
-            <h2>If you have any enquiers, feel free to contact us by clicking <a href="contact.html">here</a>.</h2>
-        </main>
+            <section id="s1">
+                <h2 style="font-size: xx-large;">Introduction</h2>
+                <p style="font-size: large;">
+                    To encourage sustainable living and instill eco-friendly habits in users 
+                    to help better our environmental and ecological footprint. This will be 
+                    done through the application by informing users on how to be environmentally
+                    conscious and offering various tools such as a tracking system to maintain and 
+                    encourage their eco-friendly habits. 
+                </p>
+    
+                <h2>Purpose</h2>
+                <p style="font-size: large;">
+                    To encourage sustainable living and instill eco-friendly habits in users 
+                    to help better our environmental and ecological footprint. This will be 
+                    done through the application by informing users on how to be environmentally
+                    conscious and offering various tools such as a tracking system to maintain and 
+                    encourage their eco-friendly habits. 
+                </p>
+            
+                <h2>Target Audience</h2>
+                <p style="font-size: large;">
+                    This application is aimed towards those who are curious of how to make 
+                    better choices that do not harm the environment. This applies to people 
+                    who want to be more knowledgeable and involved in being environmentally 
+                    friendly as well as corporations who are aiming to improve their corporate 
+                    social responsibility in terms of their environmental efforts.
+                </p>
+            </section>
+            <br>
 
+            <section id="s2">
+                <h2 style="font-size: xx-large;">Features</h2>
+                <div>
+                    <h3 style="font-size: x-large;"><a href="tips.html">Tips and Guides on sustainable lifestyle</a></h3>
+                    <p style="font-size: large;"><i>Here are some tips for you to maintain a sustainable lifestyle !</i></p>
+                </div>
+                <br>
+                <div>
+                    <h3 style="font-size: x-large;"><a href="quiz.html">Eco-friendly Lifestyle Quiz</a></h3>
+                    <p style="font-size: large;"><i>Here is some tips for you to maintain a sustainable lifestyle!</i></p>
+                </div>
+                <br>
+                <div>
+                    <h3 style="font-size: x-large;"><a href="cal.html">Carbon Footprint Calculator</a></h3>
+                    <p style="font-size: large;"><i>Here is some tips for you to maintain a sustainable lifestyle!</i></p>
+                </div>
+            </section>
+            <br>
+
+            <section id="s3">
+                <h2 style="font-size: xx-large;">FAQ</h2>
+                <h3>If you have any enquieries, feel free to contact us by clicking <a href="contact.html">here</a>.</h2>
+            </section>
+        </main>
+        <footer>
+            <i><strong>Copyright&copy; 2025 Eco-Life</strong></i>
+        </footer>
     </body>
 </html>

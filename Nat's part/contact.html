@@ -6,17 +6,16 @@
         <meta name = "viewport" content="width=device-width initial scale = 1.0">
         <style>
             body{
-                background-color: rgb(145, 199, 212);
+                background-color: rgb(157, 225, 242);
                 font-family:monospace;
-                color: rgb(255, 255, 255);
+                color: rgb(39, 120, 218);
             }
             nav{
+                padding: 2px;
                 padding-left: 3%;
-                padding-top: 1%;
-                padding-bottom: 1%;
-                background-color: rgb(136, 241, 241);
                 color: beige;
-                font-family: fantasy;
+                font-weight: bold;
+                font-size: 16px;
             }
             main {
                 padding: 3%;
@@ -32,9 +31,7 @@
                 padding-bottom: 40px;
                 background-color: beige;
                 color: rgb(82, 203, 233);
-                
             }
-            
             tbody{
                 text-align:center;
             }
@@ -42,50 +39,59 @@
                 font-size: x-large;
                 text-align:center;
             }
-            
             thead th{
                 padding-bottom: 25px;
                 font-size: large;
-                
             }
             tbody td{
                 padding-top: 25px;
             }
-
+            a {
+                color: inherit;
+            }
         </style>
     </head>
     <body>
         <header>
 			<h1 style="padding-left: 2%;">Contact Us</h1>
 		</header>
-        <nav>
-            <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;            
+        <nav style="background-color: rgb(6, 141, 185);">
+            <p>
+                <a href="index.html" target="_blank">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="about.html" target="_blank">About</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+            </p>          
+        </nav>
+        <nav style="background-color: rgb(26, 110, 156);">
+            <p>
+                Contact &nbsp;&nbsp;&#11166;&nbsp;&nbsp;&nbsp;
+                <a href="#s1">Feedback</a> &nbsp;&nbsp;&nbsp;
+                <a href="#s2">Our Team</a> &nbsp;&nbsp;&nbsp;
+            </p>
         </nav>
         <main>
-            <h2>Any feedback ?</h2>
-            <div style="padding-left: 25%;">
-                <h3>Your feedback is precious to us!</h3>
-                <form action="mailto:nat127@my.yorku.ca" method="post">
-                    First Name:
-                    <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Last Name: <input type="text" name="lastname" id="lastname" size="25" tabindex="2">
-                    <br><br/>
-                    Email:
-                    <input type="text"name="email" id="email" size="35" tabindex="3" />
-                    &nbsp;&nbsp;&nbsp;&nbsp;
-                    Mobile Phone number:
-                    <input type="text" name="phone" id="phone" size="25" tabindex="4">
-                    <p>Your feedback:</p>
-                    <textarea cols="100" rows="20" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message"></textarea>
-                </form>
-            </div>
-            <div>
+            <section id="s1">
+                <h2>Any feedback ?</h2>
+                <div style="padding-left: 25%;">
+                    <h3>Your feedback is precious to us!</h3>
+                    <form action="mailto:nat127@my.yorku.ca" method="post">
+                        First Name:
+                        <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        Last Name: <input type="text" name="lastname" id="lastname" size="25" tabindex="2">
+                        <br><br/>
+                        Email:
+                        <input type="text"name="email" id="email" size="35" tabindex="3" />
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        Mobile Phone number:
+                        <input type="text" name="phone" id="phone" size="25" tabindex="4">
+                        <p>Your feedback:</p>
+                        <textarea cols="100" rows="21" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message"></textarea>
+                    </form>
+                </div>
+            </section>
+            <section id="s2">
+                <h2 style="padding-top: 3%;">Our team members</h2>
                 <table>
-                    <br>
-                    <h2>Our team members</h2>
-                    
                     <thead>
                          <tr>
                             <th>Harris Vidyavinodhan <br></th>
@@ -106,10 +112,10 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </section>
         </main>
         <footer>
-            <p>Copyright&copy; 2025</p>
+            <i><strong>Copyright&copy; 2025 Eco-Life</strong></i>
         </footer>
     </body>
 </html>
