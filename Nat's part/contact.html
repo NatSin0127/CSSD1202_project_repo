@@ -19,35 +19,28 @@
             }
             main {
                 padding: 3%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
             }
             footer{
                 padding-left: 2%;
             }
-            table{
-                width: 70%;
-                height: 50%;
-                margin: auto;
-                padding-top: 40px;
-                padding-bottom: 40px;
-                background-color: beige;
-                color: rgb(82, 203, 233);
-            }
-            tbody{
-                text-align:center;
-            }
-            h2{
-                font-size: x-large;
-                text-align:center;
-            }
-            thead th{
-                padding-bottom: 25px;
-                font-size: large;
-            }
-            tbody td{
-                padding-top: 25px;
-            }
+            
             a {
                 color: inherit;
+            }
+            
+            #teamInfo{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+            }
+          
+            #harris,#courage,#nat{
+                background-color: beige;
+                padding: 2%;
             }
         </style>
     </head>
@@ -70,36 +63,56 @@
         </nav>
         <main>
             <section id="s1">
-                <h2>Any feedback ?</h2>
-                <div style="padding-left: 25%;">
+                <div id="title">
+                    <h2 style="font-size: x-large;">Any feedback ?</h2>
                     <h3>Your feedback is precious to us!</h3>
-                    <form action="mailto:nat127@my.yorku.ca" method="post">
-                        First Name:
-                        <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        Last Name: <input type="text" name="lastname" id="lastname" size="25" tabindex="2">
-                        <br><br/>
-                        Email:
-                        <input type="text"name="email" id="email" size="35" tabindex="3" />
-                        &nbsp;&nbsp;&nbsp;&nbsp;
-                        Mobile Phone number:
-                        <input type="text" name="phone" id="phone" size="25" tabindex="4">
-                        <p>Your feedback:</p>
-                        <textarea cols="100" rows="21" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message"></textarea>
-                    </form>
-                </div>
+                    <br>
+                </div>    
+                <form action="mailto:nat127@my.yorku.ca" method="post">
+                    First Name:
+                    <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
+                    <br><br>
+                    Last Name: <input type="text" name="lastname" id="lastname" size="25" tabindex="2">
+                    <br><br/>
+                    Email:
+                    <input type="text"name="email" id="email" size="35" tabindex="3" />
+                    <br><br>
+                    Mobile Phone number:
+                    <input type="text" name="phone" id="phone" size="25" tabindex="4">
+                    <p><b>Your feedback:</b></p>
+                    <textarea cols="70%" rows="21" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message"></textarea>
+                </form>
             </section>
             <section id="s2">
-                <h2 style="padding-top: 3%;">Our team members</h2>
+                <h2 id="title" style="padding-top: 3%; padding-bottom: 1%;">Our team members</h2>
+                <div id="teamInfo">
+                    <div id="harris">
+                        <h3 id="title">Harris Vidyavinodhan</h3>
+                        <p>ID: 221528740</p>
+                        <p>Email: harris06@my.yorku.ca</p>
+                    </div>
+                    <div id="courage">
+                        <h3 id="title">Courage Otabor</h3>
+                        <p>ID: 221638036</p>
+                        <p>Email: courageo@my.yorku.ca</p>
+                    </div>
+                    <div id="nat">
+                        <h3 id="title">Hei Tung Sin</h3>
+                        <p>ID: 221846779</p>
+                        <p>Email: nat127@my.yorku.ca</p>
+                    </div>
+                </div>
+
+                <!--
                 <table>
-                    <thead>
+                    <thead> th will auto align to centre so no need styling
                          <tr>
                             <th>Harris Vidyavinodhan <br></th>
                             <th>Courage Otabor</th>
                             <th>Hei Tung Sin</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody> styled to align to centre
                         <tr>
                             <td>ID: 221528740</td>
                             <td>ID: 221638036</td>
@@ -112,6 +125,7 @@
                         </tr>
                     </tbody>
                 </table>
+                -->
             </section>
         </main>
         <footer>

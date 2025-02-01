@@ -1,0 +1,55 @@
+contact.html style
+body{
+    background-color: rgb(157, 225, 242);
+    font-family:monospace;
+    color: rgb(39, 120, 218);
+}
+nav{
+    padding: 2px;
+    padding-left: 3%;
+    color: beige;
+    font-weight: bold;
+    font-size: 16px;
+}
+main {
+    padding: 3%;
+}
+footer{
+    padding-left: 2%;
+}
+a {
+    color: inherit;
+}
+form{
+    text-align:center;
+}
+
+table{
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    padding: 40px;
+    background-color: beige;
+    color: rgb(82, 203, 233);
+}
+thead th{
+    padding-bottom: 25px;
+    font-size: large;
+}
+tbody{
+    text-align:center;
+}
+
+tbody td{
+    padding-top: 25px;
+}
+
+2nd version:
+#harris{
+    position: relative;
+    left: 10%;
+}
+#nat{
+    position: relative;
+    right: 10%;
+}
