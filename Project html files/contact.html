@@ -20,6 +20,10 @@
                 top: 0;
                 background-color: aliceblue;
             }
+            #webname{
+                padding-left: 2%;
+                color: midnightblue;
+            }
             nav{
                 padding: 2px;
                 padding-left: 3%;
@@ -30,35 +34,76 @@
 
             main{
                 margin-top: 175px;
-                padding: 3%;
+            }
+            #topic{
+                padding-top: 2%;
                 padding-left: 5%;
-                padding-right: 5%;
+                font-size: xx-large;
+                color: darkblue;
+            }
+            #title{
+                text-align: center;
+                font-size: x-large;
+                color: rgb(39, 120, 218);
             }
             img{
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                
                 margin: auto;
+                width: 50%;
+            }
+            #maindiv{
+                
+                padding-left: 5%;
+                padding-right: 5%;
             }
             
 
             section{
                 padding: 3%;
                 
-                position-anchor: 175px;
+                margin: auto;
+                margin-top: 3%;
             }
-            #s1, button{
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            #s1{
+                max-width: 700px;
+                padding-left: 5%;
+                padding-right: 5%;
+                background-color: beige;
+                color: darkturquoise;
+                border-radius: 10px;
+            }
+            
+            #fill{
+                margin: auto;text-align: center;
             }
             label{
                 font-size: large;
                 font-weight: bold;
             }
-            button{
-                margin: auto;
+            input{
+                width: 50%;
+                background-color: white;
+            }
+            button {
+                background-color: cadetblue;
+                color: white;
+                font-weight: bold;
+                cursor: default;
+                width: 30%;
+            }
+            textarea{
+                max-width: 500px;
+                
+            }
+            input, button, textarea{
+                display: block;
+                margin: 10px auto;
+                padding: 1%;
+                border: none;
+                font-size: 16px;
+                border-radius: 5px;
             }
 
             #teamInfo{
@@ -72,6 +117,7 @@
                 color: sienna;
                 padding: 2%;
                 font-weight: bold;
+                border-radius: 10px;
             }
             #name{
                 text-align: center;
@@ -79,21 +125,7 @@
 
             footer{
                 padding: 4%;
-                color: steelblue;
-            }
-            
-            #webname{
-                padding-left: 2%;
                 color: midnightblue;
-            }
-            #topic{
-                font-size: xx-large;
-                color: darkblue;
-            }
-            #title{
-                text-align: center;
-                font-size: x-large;
-                color: darkblue;
             }
             
             a {
@@ -123,35 +155,46 @@
         </header>
         <main>
             <h2 id="topic">Contact Us</h2>
-            <img src="img/contact.png" alt="contact">
+
+            <div id="image">
+                <img src="img/contact.png" alt="contact">
+            </div>
 
             <div id="maindiv" >
 
                 <section id="s1">
-                                          
+                    <br>              
                     <h2 id="title">Any feedback ? Your feedback is precious to us!</h2>
-                    <br>
+                    <br><br>
                     
                     <form action="mailto:nat127@my.yorku.ca" method="post">
-                        <label for="firstname">First Name:</label>
-                        <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
+                        <div id="fill">
+                            <label for="firstname">First Name:</label>
+                            <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
+                        </div>
                         <br><br>
-                        <label for="lastname">Last Name: </label>
-                        <input type="text" name="lastname" id="lastname" size="25" tabindex="2">
+                        <div id="fill">
+                            <label for="lastname">Last Name: </label><input type="text" name="lastname" id="lastname" size="25" tabindex="2">
+                        </div>
                         <br><br/>
-                        <label for="email">Email: </label>
-                        <input type="text"name="email" id="email" size="35" tabindex="3" />
+                        <div id="fill">
+                            <label for="email">Email: </label>
+                            <input type="text"name="email" id="email" size="35" tabindex="3" />
+                        </div>
                         <br><br>
-                        <label for="phone">Mobile Phone number: </label>
-                        <input type="text" name="phone" id="phone" size="25" tabindex="4">
+                        <div id="fill">
+                            <label for="phone">Mobile Phone number: </label>
+                            <input type="text" name="phone" id="phone" size="25" tabindex="4">
+                        </div>
                         <br><br>
-                        <label>Your feedback:</label>
-                        <br><br>
-                        <textarea cols="70%" rows="21" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message"></textarea>
-                        <br><br>
+                        <div id="fill">
+                            <label>Your feedback:</label>
+                            <textarea cols="70" rows="10" maxlength="2000" name="feedback" id="feedback"></textarea>
+                            <br>
+                        </div>
                         <button type="submit">Submit</button>
                     </form>
-                <br><br>
+                <br>
 
                 </section>
                 <section id="s2">
