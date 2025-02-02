@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eco-life - Contact</title>
+        <meta charset ="utf-8">
+        <meta name = "viewport" content="width=device-width initial scale = 1.0">
+        <style>
+            body{
+                background-color: rgb(157, 225, 242);
+                font-family:monospace;
+                color: rgb(39, 120, 218);
+            }
+            nav{
+                padding: 2px;
+                padding-left: 3%;
+                color: beige;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            main {
+                padding: 3%;
+                display: flex;
+                flex-direction: column;
+                align-items: baseline;
+            }
+            footer{
+                padding-left: 2%;
+            }
+            
+            a {
+                color: inherit;
+            }
+
+            table{
+                border: 1cap;
+                border-color: rgb(228, 66, 22);
+                height: 50%;
+                margin: auto;
+                padding: 40px;
+                background-color: beige;
+                color: rgb(82, 203, 233);
+            }
+            thead th{
+                padding: 25px;
+                font-size: large;
+            }
+            
+
+            tbody td{
+                padding-top: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+			<h1 style="padding-left: 2%;">Contact Us</h1>
+		</header>
+        <nav style="background-color: rgb(6, 141, 185);">
+            <p>
+                <a href="index.html" target="_blank">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="about.html" target="_blank">About</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+            </p>          
+        </nav>
+        <nav style="background-color: rgb(26, 110, 156);">
+            <p>
+                Contact &nbsp;&nbsp;&#11166;&nbsp;&nbsp;&nbsp;
+                <a href="#s1">Feedback</a> &nbsp;&nbsp;&nbsp;
+                <a href="#s2">Our Team</a> &nbsp;&nbsp;&nbsp;
+            </p>
+        </nav>
+        <main>
+            <section id="s1">
+                <div id="title">
+                    <h2 style="font-size: x-large;">Any feedback ?</h2>
+                    <h3>Your feedback is precious to us!</h3>
+                    <br>
+                </div>    
+                <form action="mailto:nat127@my.yorku.ca" method="post">
+                    First Name:
+                    <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
+                    <br><br>
+                    Last Name: <input type="text" name="lastname" id="lastname" size="25" tabindex="2">
+                    <br><br/>
+                    Email:
+                    <input type="text"name="email" id="email" size="35" tabindex="3" />
+                    <br><br>
+                    Mobile Phone number:
+                    <input type="text" name="phone" id="phone" size="25" tabindex="4">
+                    <p><b>Your feedback:</b></p>
+                    <textarea cols="70%" rows="21" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="your-message"></textarea>
+                </form>
+            </section>
+            <section id="s2">
+                <h2 id="title" style="padding-top: 3%; padding-bottom: 1%;">Our team members</h2>
+                <!--
+                <div id="teamInfo">
+                    <div id="harris">
+                        <h3 id="title">Harris Vidyavinodhan</h3>
+                        <p>ID: 221528740</p>
+                        <p>Email: <a href="mailto:harris06@my.yorku.ca">harris06@my.yorku.ca</a></p>
+                    </div>
+                    <div id="courage">
+                        <h3 id="title">Courage Otabor</h3>
+                        <p>ID: 221638036</p>
+                        <p>Email: <a href="mailto:courageo@my.yorku.ca">courageo@my.yorku.ca</a></p>
+                    </div>
+                    <div id="nat">
+                        <h3 id="title">Hei Tung Sin</h3>
+                        <p>ID: 221846779</p>
+                        <p>Email: <a href="mailto:nat127@my.yorku.ca">nat127@my.yorku.ca</a></p>
+                    </div>
+                </div>
+                -->
+                
+                <table>
+                    <thead> <!--th will auto align to centre so no need styling-->
+                         <tr>
+                            <th>Harris Vidyavinodhan <br></th>
+                            <th>Courage Otabor</th>
+                            <th>Hei Tung Sin</th>
+                        </tr>
+                    </thead>
+                    <tbody> <!--styled to align to centre-->
+                        <tr>
+                            <td>ID: 221528740</td>
+                            <td>ID: 221638036</td>
+                            <td>ID: 221846779</td>
+                        </tr>
+                        <tr>
+                            <td>Email: harris06@my.yorku.ca</td>
+                            <td>Email: courageo@my.yorku.ca</td>
+                            <td>Email: nat127@my.yorku.ca</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </section>
+        </main>
+        <footer>
+            <i><strong>Copyright&copy; 2025 Eco-Life</strong></i>
+        </footer>
+    </body>
+</html>

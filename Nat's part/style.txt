@@ -1,3 +1,10 @@
+background color previous
+
+skyblue: rgb(157, 225, 242)
+dark blue green: rgb(11, 93, 121)
+navy blue(?):rgb(26, 50, 156)
+skygreenblue: rgb(69, 196, 216)
+
 contact.html style
 body{
     background-color: rgb(157, 225, 242);
@@ -44,6 +51,8 @@ tbody td{
     padding-top: 25px;
 }
 
+
+
 2nd version:
 #harris{
     position: relative;
@@ -52,4 +61,17 @@ tbody td{
 #nat{
     position: relative;
     right: 10%;
+}
+
+3rd ver:
+#teamInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#harris,#courage,#nat{
+    background-color: beige;
+    padding: 2%;
 }

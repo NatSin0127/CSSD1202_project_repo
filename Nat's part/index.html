@@ -3,122 +3,189 @@
     <head>
         <Title>Eco-life Homepage</Title>
         <meta charset ="utf-8">
+        <!--
         <meta name = "viewport" content="width=device-width initial scale = 1.0">
+        -->
         <style>
+            
             body{
-                background-color: rgb(157, 225, 242);
                 font-family:monospace;
-                color: rgb(39, 120, 218);
+                color: white;
+                margin: 0;
+            }
+
+            header{
+                width:100%;
+                position: fixed;
+                top: 0;
             }
             nav{
                 padding: 2px;
                 padding-left: 3%;
-                color: beige;
-                font-weight: bolder;
+                color: peachpuff;
+                font-weight: bold;
                 font-size: 16px;
             }
-            main {
+
+            main{
+                margin-top: 175px;
+            }
+            #image{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                background-color: aliceblue;
+                padding: 5%;
+                margin: 0;
+            }
+            img{
+                height: 200px;
+            }
+            #maindiv{
                 padding: 2%;
                 padding-left: 5%;
                 padding-right: 5%;
             }
-            footer{
-                padding-left: 2%;
-            }
-            div{
+            #feature{
                 padding: 2%;
                 padding-left: 5%;
-                background-color: rgb(69, 196, 216);
-                color: beige;
+                background-color: beige;
+                color: darkturquoise;
                 width: 70%;
                 margin: auto;
             }
-            dt{
-                font-size: x-large;
+
+            footer{
+                padding: 4%;
             }
-            dd{
+            
+            
+            #webname {
+                padding-left: 2%;
+                color: midnightblue;
+            }
+            #title{
+                font-size: xx-large;
+            }
+            #para{
+                text-indent: 40px;
+            }
+            #para, #line{
                 font-size: large;
+            }
+
+            #title,footer{
+                color: white;
+            }
+            header,body{
+                background-color: skyblue;
             }
             a {
                 color: inherit;
-            }    
+            }
         </style>
     </head>
+
     <body>
         <header>
-			<h1 style="padding-left: 2%;">Eco-life</h1>
-		</header>
-        <nav style="background-color: rgb(6, 141, 185);">
-            <p>
-                <a href="about.html" target="_blank">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="contact.html" target="_blank">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            </p>
-        </nav>
-        <nav style="background-color: rgb(26, 110, 156);">
-            <p>
-                Home &nbsp;&nbsp;&#11166;&nbsp;&nbsp;&nbsp;
-                <a href="#s1">Introduction</a> &nbsp;&nbsp;&nbsp;
-                <a href="#s2">Features</a> &nbsp;&nbsp;&nbsp;
-                <a href="#s3">FAQ</a> &nbsp;&nbsp;&nbsp;
-            </p>
-        </nav>
+
+			<h1 id="webname">Eco-life</h1>
+		
+            <nav style="background-color: cadetblue">
+                <p>
+                    <a href="about.html" target="_blank">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="contact.html" target="_blank">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+            </nav>
+
+            <nav style="background-color: steelblue;">
+                <p>
+                    Home &nbsp;&nbsp;&#11166;&nbsp;&nbsp;&nbsp;
+                    <a href="#s1">Introduction</a> &nbsp;&nbsp;&nbsp;
+                    <a href="#s2">Features</a> &nbsp;&nbsp;&nbsp;
+                    <a href="#s3">Questions?</a> &nbsp;&nbsp;&nbsp;
+                </p>
+            </nav>
+
+        </header>
+
         <main>
-            <section id="s1">
-                <h2 style="font-size: xx-large;">Introduction</h2>
-                <p style="font-size: large;">
-                    To encourage sustainable living and instill eco-friendly habits in users 
-                    to help better our environmental and ecological footprint. This will be 
-                    done through the application by informing users on how to be environmentally
-                    conscious and offering various tools such as a tracking system to maintain and 
-                    encourage their eco-friendly habits. 
-                </p>
-    
-                <h2>Purpose</h2>
-                <p style="font-size: large;">
-                    To encourage sustainable living and instill eco-friendly habits in users 
-                    to help better our environmental and ecological footprint. This will be 
-                    done through the application by informing users on how to be environmentally
-                    conscious and offering various tools such as a tracking system to maintain and 
-                    encourage their eco-friendly habits. 
-                </p>
-            
-                <h2>Target Audience</h2>
-                <p style="font-size: large;">
-                    This application is aimed towards those who are curious of how to make 
-                    better choices that do not harm the environment. This applies to people 
-                    who want to be more knowledgeable and involved in being environmentally 
-                    friendly as well as corporations who are aiming to improve their corporate 
-                    social responsibility in terms of their environmental efforts.
-                </p>
-            </section>
-            <br>
 
-            <section id="s2">
-                <h2 style="font-size: xx-large;">Features</h2>
-                <div>
-                    <h3 style="font-size: x-large;"><a href="tips.html">Tips and Guides on sustainable lifestyle</a></h3>
-                    <p style="font-size: large;"><i>Here are some tips for you to maintain a sustainable lifestyle !</i></p>
-                </div>
-                <br>
-                <div>
-                    <h3 style="font-size: x-large;"><a href="quiz.html">Eco-friendly Lifestyle Quiz</a></h3>
-                    <p style="font-size: large;"><i>Here is some tips for you to maintain a sustainable lifestyle!</i></p>
-                </div>
-                <br>
-                <div>
-                    <h3 style="font-size: x-large;"><a href="cal.html">Carbon Footprint Calculator</a></h3>
-                    <p style="font-size: large;"><i>Here is some tips for you to maintain a sustainable lifestyle!</i></p>
-                </div>
-            </section>
-            <br>
+            <div id="image">
+                <img src="bag.png" alt="bag">
+                <img src="earth.png" alt="earth">
+                <img src="heart.png" alt="heart">
+            </div>
 
-            <section id="s3">
-                <h2 style="font-size: xx-large;">FAQ</h2>
-                <h3>If you have any enquieries, feel free to contact us by clicking <a href="contact.html">here</a>.</h2>
-            </section>
+            <div id="maindiv">
+                
+                <section id="s1">
+                    <h2 id="title">Welcome to Eco-life !</h2>
+                    <p id="para">
+                        Eco-life is a sustainable living platform, where we empower 
+                        individuals to embrace eco-friendly choices for a greener future. 
+                        Our mission is to inspire and support you on developing eco-friendly
+                        habits by offering a range of tools and resources. In here,
+                        you may explore our guidelines on sustainable living practices, 
+                        take quizzes to test your eco-knowledge, and use our carbon 
+                        footprint calculator to understand the impact of your lifestyle 
+                        choices. Together, let's make a difference and create a more 
+                        sustainable world for our future generations.
+                    </p>
+        
+                    <h2>Purpose</h2>
+                    <p id="para">
+                        Through Eco-life, we hope to raise your awareness on how your daily 
+                        actions would impact the sustainability of our world. By offering 
+                        various tools in our platform, we encourages users could pay more 
+                        attention to the consequences and the changes brought by their swift 
+                        in daily living habits and also making informed decisions to foster 
+                        a green living environment for all of us.
+                    </p>
+                
+                    <h2>Who should visit Eco-life ?</h2>
+                    <p id="para">
+                        Eco-life is targeted at individuals who are curious about the 
+                        environmental impact of their daily actions and those who are 
+                        desired to contribute to sustainability of our home. Whether you 
+                        are seeking for some possible sustainable practices you can adopt or 
+                        corporations that yearn to enhance their understanding of 
+                        environmental issues, Eco-life could empower you to make meaningful 
+                        and positive changes for a more sustainable future.
+                    </p>
+                </section>
+                <br>
+
+                <section id="s2">
+                    <h2 id="title">Features</h2>
+                    <div id="feature">
+                        <h3 style="font-size: x-large;"><a href="tips.html">Tips and Guides on sustainable lifestyle</a></h3>
+                        <p id="line"><i>Here are some tips for you to maintain a sustainable lifestyle !</i></p>
+                    </div>
+                    <br>
+                    <div id="feature">
+                        <h3 style="font-size: x-large;"><a href="quiz.html">Eco-friendly Lifestyle Quiz</a></h3>
+                        <p id="line"><i>Are you acquiring sustainable lifestyle ?</i></p>
+                    </div>
+                    <br>
+                    <div id="feature">
+                        <h3 style="font-size: x-large;"><a href="cal.html">Carbon Footprint Calculator</a></h3>
+                        <p id="line"><i>Do you know how many carbon footprint have you produced today ?</i></p>
+                    </div>
+                </section>
+                <br>
+
+                <section id="s3">
+                    <h2 id="title">Questions?</h2>
+                    <h3>If you have any enquieries, feel free to contact us by clicking <a href="contact.html">here</a>.</h2>
+                </section>
+
+            </div>
         </main>
+
         <footer>
             <i><strong>Copyright&copy; 2025 Eco-Life</strong></i>
         </footer>
+
     </body>
 </html>
