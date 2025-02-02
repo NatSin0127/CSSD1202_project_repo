@@ -31,6 +31,9 @@
                 color: rgb(39, 120, 218);
             }
             section {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
                 margin: 20px auto;
                 padding: 20px;
                 background-color: beige;
@@ -38,17 +41,26 @@
                 border-radius: 10px;
                 max-width: 800px;
             }
+            section img {
+                max-width: 150px;
+                height: auto;
+                border-radius: 10px;
+                margin-left: 20px;
+            }
             footer {
                 padding: 4%;
-                padding-left: 2%;
-                color: white;
+                text-align: left;
+                background-color: skyblue;
             }
             #webname {
                 padding-left: 2%;
                 color: midnightblue;
             }
-            #title, footer {
+            #title {
                 color: white;
+            }
+            .copyright {
+                color: midnightblue;
             }
             a {
                 color: inherit;
@@ -78,30 +90,43 @@
         <main>
             <h2>Tips for Sustainable Living</h2>
             <section>
-                <h3>1. Use Less Plastic</h3>
-                <p>Plastic takes years to break down and harms the environment. Carry a reusable bag, bottle, and utensils  to reduce waste.
-
-                </p>
+                <div>
+                    <h3>1. Use Less Plastic</h3>
+                    <p>Plastic takes years to break down and harms the environment. Carry a reusable bag, bottle, and utensils to reduce waste.</p>
+                </div>
+                <img src="img/plastic.png" alt="Plastic reduction">
             </section>
             <section>
-                <h3>2. Save Energy at Home</h3>
-                <p>Turn off lights when you leave a room. Use energy-efficient appliances and unplug devices when not in use.</p>
+                <div>
+                    <h3>2. Save Energy at Home</h3>
+                    <p>Turn off lights when you leave a room. Use energy-efficient appliances and unplug devices when not in use.</p>
+                </div>
+                <img src="img/energy.png" alt="Save energy">
             </section>
             <section>
-                <h3>3. Walk or Bike More</h3>
-                <p>Cars release a lot of pollution. Walking, biking, or using public transport is better for the air and your health.</p>
+                <div>
+                    <h3>3. Walk or Bike More</h3>
+                    <p>Cars release a lot of pollution. Walking, biking, or using public transport is better for the air and your health.</p>
+                </div>
+                <img src="img/walking.png" alt="Walking and biking" width = "75">
             </section>
             <section>
-                <h3>4. Buy Only What You Need</h3>
-                <p>Overconsumption leads to waste. Think before you buy, choose quality over quantity, and support eco-friendly brands. </p>
+                <div>
+                    <h3>4. Buy Only What You Need</h3>
+                    <p>Overconsumption leads to waste. Think before you buy, choose quality over quantity, and support eco-friendly brands.</p>
+                </div>
+                <img src="img/cart.png" alt="Smart shopping">
             </section>
             <section>
-                <h3>5. Eat More Plants</h3>
-                <p>Meat production has a big carbon footprint. Eating more veggies and plant-based meals helps the planet.</p>
+                <div>
+                    <h3>5. Eat More Plants</h3>
+                    <p>Meat production has a big carbon footprint. Eating more veggies and plant-based meals helps the planet.</p>
+                </div>
+                <img src="img/plant.png" alt="Plant-based diet">
             </section>
         </main>
         <footer>
-            <i><strong>Copyright&copy; 2025 Eco-Life</strong></i>
+            <i><strong class="copyright">Copyright&copy; 2025 Eco-Life</strong></i>
         </footer>
     </body>
 </html>
