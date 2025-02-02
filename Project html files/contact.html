@@ -9,14 +9,16 @@
             body{
                 font-family: monospace;
                 color: white;
+                background-color: skyblue;
                 margin: 0;
-                margin-top: 175px;
+                
             }
 
             header{
                 width:100%;
-                position: fixed;
+                position: absolute;
                 top: 0;
+                background-color: aliceblue;
             }
             nav{
                 padding: 2px;
@@ -27,11 +29,11 @@
             }
 
             main{
+                margin-top: 175px;
                 padding: 3%;
                 padding-left: 5%;
                 padding-right: 5%;
             }
-
             img{
                 display: flex;
                 flex-direction: column;
@@ -39,12 +41,13 @@
                 
                 margin: auto;
             }
-            #maindiv{
-                padding: 3%;
-                padding-left: 5%;
-                padding-right: 5%;
-            }
+            
 
+            section{
+                padding: 3%;
+                
+                position-anchor: 175px;
+            }
             #s1, button{
                 display: flex;
                 flex-direction: column;
@@ -66,30 +69,36 @@
             }
             #harris,#courage,#nat{
                 background-color: beige;
-                color: darkturquoise;
+                color: sienna;
                 padding: 2%;
+                font-weight: bold;
+            }
+            #name{
+                text-align: center;
             }
 
             footer{
                 padding: 4%;
+                color: steelblue;
             }
             
             #webname{
                 padding-left: 2%;
                 color: midnightblue;
             }
-            #title, #name{
+            #topic{
+                font-size: xx-large;
+                color: darkblue;
+            }
+            #title{
                 text-align: center;
+                font-size: x-large;
+                color: darkblue;
             }
-
-            #title,footer{
-                color: white;
-            }
-            header,body{
-                background-color: skyblue;
-            }
+            
             a {
                 color: inherit;
+                text-decoration: none;
             }
 
         </style>
@@ -100,8 +109,8 @@
 		
             <nav style="background-color: cadetblue;">
                 <p>
-                    <a href="index.html" target="_blank">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="about.html" target="_blank">About</a>&nbsp;&nbsp;&nbsp;&nbsp;  
+                    <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;  
                 </p>          
             </nav>
             <nav style="background-color: steelblue;">
@@ -113,17 +122,16 @@
             </nav>
         </header>
         <main>
-            <h2 style="font-size: xx-large;">Contact Us</h2>
+            <h2 id="topic">Contact Us</h2>
             <img src="img/contact.png" alt="contact">
 
             <div id="maindiv" >
 
                 <section id="s1">
-                    <div id="title">
-                        
-                        <h3 style="font-size: x-large;">Any feedback ? Your feedback is precious to us!</h3>
-                        <br>
-                    </div>
+                                          
+                    <h2 id="title">Any feedback ? Your feedback is precious to us!</h2>
+                    <br>
+                    
                     <form action="mailto:nat127@my.yorku.ca" method="post">
                         <label for="firstname">First Name:</label>
                         <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
@@ -147,7 +155,7 @@
 
                 </section>
                 <section id="s2">
-                    <h2 id="title" style="padding-top: 3%; padding-bottom: 1%;">Our team members</h2>
+                    <h2 id="title">Our team members</h2>
                     <div id="teamInfo">
                         <div id="harris">
                             <h3 id="name">Harris Vidyavinodhan</h3>
