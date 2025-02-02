@@ -10,6 +10,9 @@
                 color: white;
                 margin: 0;
                 background-color: skyblue;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
             }
             header {
                 width: 100%;
@@ -25,19 +28,23 @@
                 font-size: 16px;
             }
             main {
-                margin-top: 175px;
+                flex-grow: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
                 padding: 3%;
-                padding-left: 5%;
-                padding-right: 5%;
                 color: rgb(39, 120, 218);
             }
             form {
-                max-width: 600px;
-                margin: auto;
+                max-width: 400px;
+                width: 100%;
                 padding: 20px;
                 background-color: beige;
                 color: darkturquoise;
                 border-radius: 10px;
+                text-align: center;
+                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
             }
             input, select, button {
                 display: block;
@@ -53,19 +60,22 @@
                 background-color: cadetblue;
                 color: white;
                 font-weight: bold;
-                cursor: default;
+                cursor: pointer;
             }
             footer {
                 padding: 4%;
-                padding-left: 2%;
-                color: white;
+                text-align: left;
+                background-color: skyblue;
             }
             #webname {
                 padding-left: 2%;
                 color: midnightblue;
             }
-            #title, footer {
+            #title {
                 color: white;
+            }
+            .copyright {
+                color: midnightblue;
             }
             a {
                 color: inherit;
@@ -93,26 +103,26 @@
             </nav>
         </header>
         <main>
-            <h2>Carbon Footprint Calculator</h2>
             <form>
+                <h2>Carbon Footprint Calculator</h2>
                 <label for="transport">How many kilometers do you travel daily by car?</label>
-                <input type="text" id="transport" name="transport" placeholder="e.g., 20" disabled>
+                <input type="text" id="transport" name="transport" placeholder="e.g., 123">
                 
                 <label for="electricity">Your monthly electricity usage (in kWh):</label>
-                <input type="text" id="electricity" name="electricity" placeholder="e.g., 300" disabled>
+                <input type="text" id="electricity" name="electricity" placeholder="e.g., 456">
                 
                 <label for="diet">Select your diet type:</label>
-                <select id="diet" name="diet" disabled>
+                <select id="diet" name="diet">
                     <option>Vegetarian</option>
                     <option>Omnivore</option>
                     <option>Vegan</option>
                 </select>
                 
-                <button type="button" disabled>Calculate</button>
+                <button type="submit">Calculate</button>
             </form>
         </main>
         <footer>
-            <i><strong>Copyright&copy; 2025 Eco-Life</strong></i>
+            <i><strong class="copyright">Copyright&copy; 2025 Eco-Life</strong></i>
         </footer>
     </body>
 </html>
