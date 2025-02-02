@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Eco-life - Carbon Footprint Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                font-family: monospace;
+                color: white;
+                margin: 0;
+                background-color: skyblue;
+            }
+            header {
+                width: 100%;
+                position: fixed;
+                top: 0;
+                background-color: aliceblue;
+            }
+            nav {
+                padding: 2px;
+                padding-left: 3%;
+                color: peachpuff;
+                font-weight: bold;
+                font-size: 16px;
+            }
+            main {
+                margin-top: 175px;
+                padding: 3%;
+                padding-left: 5%;
+                padding-right: 5%;
+                color: rgb(39, 120, 218);
+            }
+            form {
+                max-width: 600px;
+                margin: auto;
+                padding: 20px;
+                background-color: beige;
+                color: darkturquoise;
+                border-radius: 10px;
+            }
+            input, select, button {
+                display: block;
+                margin: 10px auto;
+                padding: 10px;
+                width: 80%;
+                border: none;
+                background-color: white;
+                text-align: center;
+                font-size: 16px;
+            }
+            button {
+                background-color: cadetblue;
+                color: white;
+                font-weight: bold;
+                cursor: default;
+            }
+            footer {
+                padding: 4%;
+                padding-left: 2%;
+                color: white;
+            }
+            #webname {
+                padding-left: 2%;
+                color: midnightblue;
+            }
+            #title, footer {
+                color: white;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1 id="webname">Eco-life</h1>
+            <nav style="background-color: cadetblue;">
+                <p>
+                    <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="contact.html">Contact</a>
+                </p>
+            </nav>
+            <nav style="background-color: steelblue;">
+                <p>
+                    Calculator &nbsp;&nbsp;&#11166;&nbsp;&nbsp;&nbsp;
+                    <a href="index.html#s1">Introduction</a> &nbsp;&nbsp;&nbsp;
+                    <a href="index.html#s2">Features</a> &nbsp;&nbsp;&nbsp;
+                    <a href="index.html#s3">Questions?</a> &nbsp;&nbsp;&nbsp;
+                </p>
+            </nav>
+        </header>
+        <main>
+            <h2>Carbon Footprint Calculator</h2>
+            <form>
+                <label for="transport">How many kilometers do you travel daily by car?</label>
+                <input type="text" id="transport" name="transport" placeholder="e.g., 20" disabled>
+                
+                <label for="electricity">Your monthly electricity usage (in kWh):</label>
+                <input type="text" id="electricity" name="electricity" placeholder="e.g., 300" disabled>
+                
+                <label for="diet">Select your diet type:</label>
+                <select id="diet" name="diet" disabled>
+                    <option>Vegetarian</option>
+                    <option>Omnivore</option>
+                    <option>Vegan</option>
+                </select>
+                
+                <button type="button" disabled>Calculate</button>
+            </form>
+        </main>
+        <footer>
+            <i><strong>Copyright&copy; 2025 Eco-Life</strong></i>
+        </footer>
+    </body>
+</html>
