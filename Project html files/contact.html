@@ -3,66 +3,61 @@
     <head>
         <title>Eco-life - Contact</title>
         <meta charset ="utf-8">
-        <meta name = "viewport" content="width=device-width initial scale = 1.0">
+        <meta name = "viewport" content="width=device-width, initial scale = 1.0">
         <style>
-
-            body{
+            body {
                 font-family: monospace;
                 color: white;
                 background-color: skyblue;
                 margin: 0;
-                
             }
-
-            header{
-                width:100%;
+            header {
+                width: 100%;
                 position: absolute;
                 top: 0;
                 background-color: aliceblue;
             }
-            #webname{
+            #webname {
                 padding-left: 2%;
                 color: midnightblue;
             }
-            nav{
+            nav {
                 padding: 2px;
                 padding-left: 3%;
                 color: peachpuff;
                 font-weight: bold;
                 font-size: 16px;
             }
-
-            main{
+            main {
                 margin-top: 175px;
             }
-            #topic{
+            #topic {
                 padding-top: 3%;
                 padding-left: 5%;
                 font-size: xx-large;
                 color: darkblue;
             }
-            #title{
+            #title {
                 text-align: center;
                 font-size: x-large;
                 color: rgb(39, 120, 218);
             }
-            img{
+            img {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 margin: auto;
                 width: 50%;
             }
-            #maindiv{
+            #maindiv {
                 padding-left: 5%;
                 padding-right: 5%;
             }
-            section{
+            section {
                 margin: auto;
                 margin-top: 5%;
             }
-
-            #s1{
+            #s1 {
                 max-width: 700px;
                 padding-left: 5%;
                 padding-right: 5%;
@@ -71,29 +66,18 @@
                 color: darkturquoise;
                 border-radius: 10px;
             }
-            #fill{
-                margin: auto;text-align: center;
+            #fill {
+                margin: auto;
+                text-align: center;
             }
-            label{
+            label {
                 font-size: large;
                 font-weight: bold;
             }
-            input{
-                width: 50%;
-                background-color: white;
-            }
-            button {
-                background-color: darkcyan;
-                color: white;
-                font-weight: bold;
-                cursor: default;
-                width: 30%;
-            }
-            textarea{
+            input, button, textarea {
+                width: 100%;
                 max-width: 500px;
-                
-            }
-            input, button, textarea{
+                box-sizing: border-box;
                 display: block;
                 margin: 10px auto;
                 padding: 1%;
@@ -101,49 +85,56 @@
                 font-size: 16px;
                 border-radius: 5px;
             }
-
-            #s2{
+            button {
+                background-color: cadetblue;
+                color: white;
+                font-weight: bold;
+                cursor: default;
+                width: 30%;
+            }
+            textarea {
+                max-width: 500px;
+            }
+            #s2 {
                 width: 90%;
                 padding: 2%;
                 padding-bottom: 4%;
-                
                 background-color: lightcyan;
-                
                 border-radius: 10px;
             }
-            #teamInfo{
+            #teamInfo {
                 display: flex;
-                flex-direction: row;
+                flex-wrap: wrap;
                 align-content: center;
                 justify-content: space-evenly;
+                gap: 10px;
             }
-            #harris,#courage,#nat{
+            #harris, #courage, #nat {
+                flex: 1 1 300px;
+                max-width: 300px;
+                box-sizing: border-box;
                 background-color: lightseagreen;
                 color: aliceblue;
                 padding: 2%;
                 font-weight: bold;
                 border-radius: 10px;
             }
-            #name{
+            #name {
                 text-align: center;
             }
-
-            footer{
+            footer {
                 padding: 4%;
                 color: midnightblue;
             }
-            
             a {
                 color: inherit;
                 text-decoration: none;
             }
-
         </style>
     </head>
     <body>
         <header>
-			<h1 id="webname">Eco-life</h1>
-		
+            <h1 id="webname">Eco-life</h1>
             <nav style="background-color: cadetblue;">
                 <p>
                     <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -160,18 +151,14 @@
         </header>
         <main>
             <h2 id="topic">Contact Us</h2>
-
             <div id="image">
                 <img src="img/contact.png" alt="contact">
             </div>
-
-            <div id="maindiv" >
-
+            <div id="maindiv">
                 <section id="s1">
                     <br>              
                     <h2 id="title">Any Feedback ? Your feedback is precious to us !</h2>
                     <br><br>
-                    
                     <form action="mailto:nat127@my.yorku.ca" method="post">
                         <div id="fill">
                             <label for="firstname">First Name:</label>
@@ -184,7 +171,7 @@
                         <br><br/>
                         <div id="fill">
                             <label for="email">Email: </label>
-                            <input type="text"name="email" id="email" size="35" tabindex="3" />
+                            <input type="text" name="email" id="email" size="35" tabindex="3" />
                         </div>
                         <br><br>
                         <div id="fill">
@@ -201,7 +188,6 @@
                     </form>
                 <br>
                 </section>
-                
                 <section id="s2">
                     <h2 id="title">Our Team Members</h2>
                     <br>
@@ -224,13 +210,10 @@
                     </div>
                 </section>
                 <br><br><br>
-
             </div>
         </main>
-
         <footer>
             <i><strong>Copyright&copy; 2025 Eco-Life</strong></i>
         </footer>
-
     </body>
 </html>
