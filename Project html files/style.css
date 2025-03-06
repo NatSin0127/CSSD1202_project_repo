@@ -1,0 +1,75 @@
+body{
+    font-family:monospace;
+    color: white;
+    background-color: skyblue;
+    margin: 0;
+}
+
+header{
+    width:100%;
+    position: absolute;
+    top: 0;
+    background-color: aliceblue;
+}
+nav{
+    padding: 2px;
+    padding-left: 3%;
+    color: peachpuff;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+main{
+    margin-top: 175px;
+}
+#image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: beige;
+    padding: 5%;
+}
+img{
+    height: 200px;
+}
+#maindiv{
+    padding-left: 5%;
+    padding-right: 5%;
+}
+section{
+    padding: 3%;
+}
+#feature{
+    padding: 2%;
+    padding-left: 5%;
+    background-color: beige;
+    color: darkturquoise;
+    width: 70%;
+    margin: auto;
+    border-radius: 15px;
+}
+
+footer{
+    padding: 4%;
+    color: midnightblue;
+}
+
+#webname {
+    padding-left: 2%;
+    color: midnightblue;
+}
+#title{
+    font-size: xx-large;
+    color: rgb(39, 120, 218);
+}
+#para{
+    text-indent: 40px;
+}
+#para, #line{
+    font-size: large;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
