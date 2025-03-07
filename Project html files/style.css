@@ -89,10 +89,6 @@ nav{
     border-radius: 10px;
     text-align: center;
 }
-#fill {
-    
-    
-}
 
 .home-title, .abt-title, .tip-title, .learn-title, .cal-title{
     font-size: xx-large;
@@ -155,7 +151,7 @@ label {
     border: none;
 }
 .contactBtn {
-    background-color: cadetblue;
+    background-color: rgb(21, 187, 189);
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -182,7 +178,8 @@ textarea {
     flex: 1 1 300px;
     max-width: 300px;
     box-sizing: border-box;
-    background-color: lightseagreen;
+    background-color: rgb(86, 120, 153);
+    
     color: aliceblue;
     padding: 2%;
     font-weight: bold;
@@ -234,7 +231,7 @@ textarea {
     font-size: 16px;
     border-radius: 5px;
     border: none;
-    background-color: cadetblue;
+    background-color: rgb(21, 187, 189);
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -249,9 +246,9 @@ textarea {
 }
 
 .cal-form{
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
-    padding: 20px;
+    padding: 2%;
     background-color: beige;
     color: darkturquoise;
     border-radius: 10px;
@@ -269,8 +266,9 @@ textarea {
     font-size: 16px;
 }
 .cal-form button {
-    background-color: cadetblue;
+    background-color: rgb(21, 187, 189);
     color: white;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
 }
