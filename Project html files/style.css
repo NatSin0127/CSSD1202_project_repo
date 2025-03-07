@@ -1,17 +1,23 @@
-body{
+.home-body{
     font-family:monospace;
     color: white;
     background-color: skyblue;
     margin: 0;
 }
 
-header{
+.home-header{
     width:100%;
     position: absolute;
     top: 0;
     background-color: aliceblue;
 }
-nav{
+.nav-1{
+    background-color: cadetblue;
+}
+.nav-2{
+    background-color: steelblue;
+}
+.nav-1, .nav-2{
     padding: 2px;
     padding-left: 3%;
     color: peachpuff;
@@ -19,7 +25,7 @@ nav{
     font-size: 16px;
 }
 
-main{
+.home-main{
     margin-top: 175px;
 }
 #image{
@@ -48,8 +54,11 @@ section{
     margin: auto;
     border-radius: 15px;
 }
+.home-h3{
+    font-size: x-large;
+}
 
-footer{
+.home-footer{
     padding: 4%;
     color: midnightblue;
 }
