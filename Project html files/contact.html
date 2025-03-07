@@ -4,163 +4,39 @@
         <title>Eco-life - Contact</title>
         <meta charset ="utf-8">
         <meta name = "viewport" content="width=device-width, initial scale = 1.0">
-        <style>
-            body {
-                font-family: monospace;
-                color: white;
-                background-color: skyblue;
-                margin: 0;
-            }
-            header {
-                width: 100%;
-                position: absolute;
-                top: 0;
-                background-color: aliceblue;
-            }
-            #webname {
-                padding-left: 2%;
-                color: midnightblue;
-            }
-            nav {
-                padding: 2px;
-                padding-left: 3%;
-                color: peachpuff;
-                font-weight: bold;
-                font-size: 16px;
-            }
-            main {
-                margin-top: 175px;
-            }
-            #topic {
-                padding-top: 3%;
-                padding-left: 5%;
-                font-size: xx-large;
-                color: darkblue;
-            }
-            #title {
-                text-align: center;
-                font-size: x-large;
-                color: rgb(39, 120, 218);
-            }
-            img {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: auto;
-                width: 50%;
-            }
-            #maindiv {
-                padding-left: 5%;
-                padding-right: 5%;
-            }
-            section {
-                margin: auto;
-                margin-top: 5%;
-            }
-            #s1 {
-                max-width: 700px;
-                padding-left: 5%;
-                padding-right: 5%;
-                padding: 3%;
-                background-color: beige;
-                color: darkturquoise;
-                border-radius: 10px;
-            }
-            #fill {
-                margin: auto;
-                text-align: center;
-            }
-            label {
-                font-size: large;
-                font-weight: bold;
-            }
-            input, button, textarea {
-                width: 100%;
-                max-width: 500px;
-                box-sizing: border-box;
-                display: block;
-                margin: 10px auto;
-                padding: 1%;
-                border: none;
-                font-size: 16px;
-                border-radius: 5px;
-            }
-            button {
-                background-color: cadetblue;
-                color: white;
-                font-weight: bold;
-                cursor: default;
-                width: 30%;
-            }
-            textarea {
-                max-width: 500px;
-            }
-            #s2 {
-                width: 90%;
-                padding: 2%;
-                padding-bottom: 4%;
-                background-color: lightcyan;
-                border-radius: 10px;
-            }
-            #teamInfo {
-                display: flex;
-                flex-wrap: wrap;
-                align-content: center;
-                justify-content: space-evenly;
-                gap: 10px;
-            }
-            #harris, #courage, #nat {
-                flex: 1 1 300px;
-                max-width: 300px;
-                box-sizing: border-box;
-                background-color: lightseagreen;
-                color: aliceblue;
-                padding: 2%;
-                font-weight: bold;
-                border-radius: 10px;
-            }
-            #name {
-                text-align: center;
-            }
-            footer {
-                padding: 4%;
-                color: midnightblue;
-            }
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
     </head>
-    <body>
-        <header>
+    <body class="contact-body">
+        <header class="contact-header">
             <h1 id="webname">Eco-life</h1>
-            <nav style="background-color: cadetblue;">
+            <nav class="nav-1">
                 <p>
                     <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="learn.html">Learn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="tips.html">Tips</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="cal.html">Calculator</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="contact.html">Contact</a>
                 </p>          
             </nav>
-            <nav style="background-color: steelblue;">
+            <nav class="nav-2">
                 <p>
                     Contact &nbsp;&nbsp;&#11166;&nbsp;&nbsp;&nbsp;
-                    <a href="#s1">Feedback</a> &nbsp;&nbsp;&nbsp;
-                    <a href="#s2">Our Team</a> &nbsp;&nbsp;&nbsp;
+                    <a href="#conS1">Feedback</a> &nbsp;&nbsp;&nbsp;
+                    <a href="#conS2">Our Team</a> &nbsp;&nbsp;&nbsp;
                 </p>
             </nav>
         </header>
-        <main>
-            <h2 id="topic">Contact Us</h2>
-            <div id="image">
+        <main class="contact-main">
+            <h2 class="contact-topic">Contact Us</h2>
+            <div class="contact-image">
                 <img src="img/contact.png" alt="contact">
             </div>
             <div id="maindiv">
-                <section id="s1">
-                    <br>              
-                    <h2 id="title">Any Feedback ? Your feedback is precious to us !</h2>
-                    <br><br>
+                <section class="contact-section" id="conS1">              
                     <form action="mailto:nat127@my.yorku.ca" method="post">
+                        <h2 class="contact-title">Any Feedback? Your feedback is precious to us!</h2>
+                        <br><br>
                         <div id="fill">
                             <label for="firstname">First Name:</label>
                             <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
@@ -185,12 +61,12 @@
                             <textarea cols="70" rows="10" maxlength="2000" name="feedback" id="feedback"></textarea>
                             <br>
                         </div>
-                        <button type="submit">Submit</button>
+                        <button class="contactBtn" type="submit">Submit</button>
                     </form>
                 <br>
                 </section>
-                <section id="s2">
-                    <h2 id="title">Our Team Members</h2>
+                <section class="contact-section" id="conS2">
+                    <h2 class="contact-title">Our Team Members</h2>
                     <br>
                     <div id="teamInfo">
                         <div id="harris">

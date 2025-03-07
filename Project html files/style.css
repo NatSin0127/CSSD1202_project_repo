@@ -1,15 +1,30 @@
-.home-body{
+body{
     font-family:monospace;
     color: white;
     background-color: skyblue;
     margin: 0;
 }
 
-.home-header{
+header{
     width:100%;
-    position: absolute;
+    position: absolute; 
+    /*position chg to 'fix' can fix the nav at top but
+     when jump to section, some contents hide behide*/
     top: 0;
     background-color: aliceblue;
+}
+
+#webname {
+    padding-left: 2%;
+    color: midnightblue;
+}
+
+nav{
+    padding: 2px;
+    padding-left: 3%;
+    color: peachpuff;
+    font-weight: bold;
+    font-size: 16px;
 }
 .nav-1{
     background-color: cadetblue;
@@ -17,37 +32,84 @@
 .nav-2{
     background-color: steelblue;
 }
-.nav-1, .nav-2{
-    padding: 2px;
-    padding-left: 3%;
-    color: peachpuff;
-    font-weight: bold;
-    font-size: 16px;
-}
 
-.home-main{
+.home-main, .contact-main{
     margin-top: 175px;
 }
-#image{
+
+.home-image{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     background-color: beige;
     padding: 5%;
-}
-img{
     height: 200px;
+}
+.contact-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+}
+.contact-topic {
+    padding-top: 3%;
+    padding-left: 5%;
+    font-size: xx-large;
+    color: darkblue;
 }
 #maindiv{
     padding-left: 5%;
     padding-right: 5%;
 }
-section{
+
+.abt-main, .tip-main, .learn-main, .quiz-main, .cal-main{
+    margin-top: 175px;
+    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.cal-main, #conS1 {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.contact-section {
+    margin: auto;
+    margin-top: 5%;
+}
+#conS1 {
+    max-width: 700px;
+    padding: 3% 5%;
+    background-color: beige;
+    color: darkturquoise;
+    border-radius: 10px;
+    text-align: center;
+}
+#fill {
+    
+    
+}
+
+.home-title, .abt-title, .tip-title, .learn-title, .cal-title{
+    font-size: xx-large;
+    color: rgb(39, 120, 218);
+}
+.home-section{
     padding: 3%;
 }
+
+#para{
+    text-indent: 40px;
+}
+#para, #line{
+    font-size: large;
+}
 #feature{
-    padding: 2%;
-    padding-left: 5%;
+    padding: 2% 5%;
     background-color: beige;
     color: darkturquoise;
     width: 70%;
@@ -58,27 +120,157 @@ section{
     font-size: x-large;
 }
 
-.home-footer{
-    padding: 4%;
-    color: midnightblue;
-}
-
-#webname {
-    padding-left: 2%;
-    color: midnightblue;
-}
-#title{
-    font-size: xx-large;
+.contact-title{
+    text-align: center;
+    font-size: x-large;
     color: rgb(39, 120, 218);
 }
-#para{
-    text-indent: 40px;
-}
-#para, #line{
-    font-size: large;
+
+footer{
+    padding: 4%;
+    color: midnightblue;
 }
 
 a {
     color: inherit;
     text-decoration: none;
+}
+
+/*only contact*/
+
+label {
+    font-size: large;
+    font-weight: bold;
+}
+#fill input, .contactBtn, textarea {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+
+    display: block;
+    margin: 10px auto;
+    padding: 1%;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+}
+.contactBtn {
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    width: 30%;
+}
+textarea {
+    max-width: 500px;
+}
+#conS2 {
+    width: 90%;
+    padding: 2%;
+    padding-bottom: 4%;
+    background-color: lightcyan;
+    border-radius: 10px;
+}
+#teamInfo {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+#harris, #courage, #nat {
+    flex: 1 1 300px;
+    max-width: 300px;
+    box-sizing: border-box;
+    background-color: lightseagreen;
+    color: aliceblue;
+    padding: 2%;
+    font-weight: bold;
+    border-radius: 10px;
+}
+#name {
+    text-align: center;
+}
+
+/* only tip*/
+.tip-section, .learn-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: beige;
+    color: darkturquoise;
+    border-radius: 10px;
+    max-width: 800px;
+}
+.tip-section img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+/* only quiz */
+.quiz-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: beige;
+    color: darkturquoise;
+    border-radius: 10px;
+    max-width: 800px;
+}
+.question {
+    margin-bottom: 15px;
+}
+
+.quizBtn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* only cal */
+
+.cal-body {          
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.cal-form{
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: beige;
+    color: darkturquoise;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.cal-form input, .cal-form button, .cal-form select{
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    background-color: white;
+    text-align: center;
+    font-size: 16px;
+}
+.cal-form button {
+    background-color: cadetblue;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }

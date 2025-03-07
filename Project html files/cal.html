@@ -4,104 +4,31 @@
         <title>Eco-life - Carbon Footprint Calculator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <style>
-            body {
-                font-family: monospace;
-                color: white;
-                margin: 0;
-                background-color: skyblue;
-                display: flex;
-                flex-direction: column;
-                min-height: 100vh;
-            }
-            header {
-                width: 100%;
-                position: fixed;
-                top: 0;
-                background-color: aliceblue;
-            }
-            nav {
-                padding: 2px;
-                padding-left: 3%;
-                color: peachpuff;
-                font-weight: bold;
-                font-size: 16px;
-            }
-            main {
-                flex-grow: 1;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-                padding: 3%;
-                color: rgb(39, 120, 218);
-            }
-            form {
-                max-width: 400px;
-                width: 100%;
-                padding: 20px;
-                background-color: beige;
-                color: darkturquoise;
-                border-radius: 10px;
-                text-align: center;
-                box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-            }
-            input, select, button {
-                display: block;
-                margin: 10px auto;
-                padding: 10px;
-                width: 80%;
-                border: none;
-                background-color: white;
-                text-align: center;
-                font-size: 16px;
-            }
-            button {
-                background-color: cadetblue;
-                color: white;
-                font-weight: bold;
-                cursor: pointer;
-            }
-            footer {
-                padding: 4%;
-                text-align: left;
-                background-color: skyblue;
-            }
-            #webname {
-                padding-left: 2%;
-                color: midnightblue;
-            }
-            #title {
-                color: white;
-            }
-            .copyright {
-                color: midnightblue;
-            }
-            a {
-                color: inherit;
-                text-decoration: none;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css">
+        
     </head>
-    <body>
+    <body class="cal-body">
         <header>
             <h1 id="webname">Eco-life</h1>
-            <nav style="background-color: cadetblue;">
+            <nav class="nav-1">
                 <p>
                     <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="learn.html">Learn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="tips.html">Tips</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="cal.html">Calculator</a>&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="contact.html">Contact</a>
                 </p>
             </nav>
-            <nav style="background-color: steelblue;">
+            <nav class="nav-2">
                 <p>
-                    Calculator
+                    Carbon Footprint Calculator
                 </p>
             </nav>
         </header>
-        <main>
-            <form>
-                <h2>Carbon Footprint Calculator</h2>
+        <main class="cal-main">
+            <form class="cal-form">
+                <h2 class="cal-title">Carbon Footprint Calculator</h2>
                 <label for="transport">How many kilometers do you travel daily by car?</label>
                 <input type="text" id="transport" name="transport" placeholder="e.g., 123">
                 
@@ -119,7 +46,7 @@
             </form>
         </main>
         <footer>
-            <i><strong class="copyright">Copyright&copy; 2025 Eco-Life - Certain images used on this site are licensed from Clipart.com</strong></i>
+            <i><strong>Copyright&copy; 2025 Eco-Life - Certain images used on this site are licensed from Clipart.com</strong></i>
         </footer>
     </body>
 </html>

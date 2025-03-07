@@ -1,86 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Eco-life - Quiz</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco-life - Quiz</title>
-    <style>
-        body {
-            font-family: monospace;
-            color: midnightblue;
-            background-color: skyblue;
-            margin: 0;
-        }
-        header {
-            width: 100%;
-            position: absolute;
-            top: 0;
-            background-color: aliceblue;
-            color: navy;
-        }
-        nav {
-            padding: 2px;
-            padding-left: 3%;
-            color: peachpuff;
-            font-weight: bolder;
-            font-size: 16px;
-        }
-        main {
-            margin-top: 175px;
-            padding: 2%;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-        section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: beige;
-            color: darkturquoise;
-            border-radius: 10px;
-            max-width: 800px;
-        }
-        footer {
-            padding: 4%;
-            text-align: left;
-            background-color: skyblue;
-            color: midnightblue;
-            font-size: 12px;
-        }
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        .question {
-            margin-bottom: 15px;
-        }
-        button {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            color: white;
-            background-color: cadetblue;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 style="padding-left: 2%;">Eco-life</h1>
-        <nav style="background-color: cadetblue;">
+        <h1 id="webname">Eco-life</h1>
+        <nav class="nav-1">
             <p>
                 <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="about.html">About</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                <a href="contact.html">Contact</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="learn.html">Learn</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="tips.html">Tips</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="cal.html">Calculator</a>&nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="contact.html">Contact</a>
             </p>
         </nav>
-        <nav style="background-color: steelblue;">
+        <nav class="nav-2">
             <p>
                 Eco-Friendly Quiz &nbsp;&nbsp;&#11166;&nbsp;&nbsp;&nbsp;
                 <a href="#s1">Quiz Purpose</a> &nbsp;&nbsp;&nbsp;
@@ -88,8 +27,8 @@
             </p>
         </nav>
     </header>
-    <main>
-        <section id="s1">
+    <main class="quiz-main">
+        <section class="quiz-section" id="s1">
             <h2>Quiz Purpose</h2>
             <p>
                 This quiz is designed to help you realize what actions you make in your day-to-day life 
@@ -98,7 +37,7 @@
             </p>
         </section>
         
-        <section id="s2">
+        <section class="quiz-section" id="s2">
             <h2>Quiz</h2>
             <form>
                 <div class="question">
@@ -159,7 +98,7 @@
                     <input type="radio" name="q10" value="true"> True
                     <input type="radio" name="q10" value="false"> False
                 </div>
-                <button type="button">Submit</button>
+                <button class="quizBtn" type="button">Submit</button>
             </form>
         </section>
     </main>
