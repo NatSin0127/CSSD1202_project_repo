@@ -33,95 +33,6 @@ nav{
     background-color: steelblue;
 }
 
-.home-main, .contact-main{
-    margin-top: 175px;
-}
-
-.home-image{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    background-color: beige;
-    padding: 5%;
-    height: 200px;
-}
-.contact-image{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    width: 50%;
-}
-.contact-topic {
-    padding-top: 3%;
-    padding-left: 5%;
-    font-size: xx-large;
-    color: darkblue;
-}
-#maindiv{
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.abt-main, .tip-main, .learn-main, .quiz-main, .cal-main{
-    margin-top: 175px;
-    padding: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
-.cal-main, #conS1 {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 
-
-.contact-section {
-    margin: auto;
-    margin-top: 5%;
-}
-#conS1 {
-    max-width: 700px;
-    padding: 3% 5%;
-    background-color: beige;
-    color: darkturquoise;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.home-title, .abt-title, .tip-title, .learn-title, .cal-title{
-    font-size: xx-large;
-    color: rgb(39, 120, 218);
-}
-.home-section{
-    padding: 3%;
-}
-
-#para{
-    text-indent: 40px;
-}
-#para, #line{
-    font-size: large;
-}
-#feature{
-    padding: 2% 5%;
-    background-color: beige;
-    color: darkturquoise;
-    width: 70%;
-    margin: auto;
-    border-radius: 15px;
-}
-.home-h3{
-    font-size: x-large;
-}
-
-.contact-title{
-    text-align: center;
-    font-size: x-large;
-    color: rgb(39, 120, 218);
-}
-
 footer{
     padding: 4%;
     color: midnightblue;
@@ -132,8 +43,92 @@ a {
     text-decoration: none;
 }
 
-/*only contact*/
+.home-main {
+    margin-top: 175px;
+}
+.abt-main, .contact-main,.tip-main, .learn-main, .quiz-main, .cal-main{
+    margin-top: 175px;
+    padding: 3% 10%;
+}
 
+.cal-main, #conS1 {
+    flex-grow: 1;
+    display: flex; /* default: vertical direction */
+    align-items: center;
+    justify-content: center;
+}
+
+.home-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: beige;
+    padding: 5% 0%;
+    height: 200px;
+}
+.contact-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    width: 50%;
+}
+
+.home-section {
+    padding: 3% 10%;
+}
+.abt-section{
+    padding-top: 2%;
+}
+.contact-section {
+    margin: 5% auto;
+}
+#conS1 {
+    padding: 3% 0%;
+    max-width: 700px;
+    background-color: beige;
+    color: darkturquoise;
+    border-radius: 10px;
+    text-align: center;
+}
+#conS2 {
+    max-width: 1000px;
+    padding: 2% 2% 3%;
+    background-color: lightcyan;
+    border-radius: 10px;
+}
+
+.home-title, .contact-title, .abt-title, .tip-title, .learn-title, .cal-title{
+    font-size: xx-large;
+    color: rgb(34, 74, 167);
+}
+.para-title, .form-title{
+    font-size: x-large;
+    color: rgb(39, 120, 218);
+}
+
+#para{
+    text-indent: 5%;
+}
+#para, #line{
+    font-size: large;
+}
+.blk-title{
+    font-size: x-large;
+}
+
+/* only home */
+#feature{
+    padding: 2% 5%;
+    width: 70%;
+    background-color: beige;
+    color: darkturquoise;
+    margin: auto;
+    border-radius: 15px;
+}
+
+
+/* contact section 1 */
 label {
     font-size: large;
     font-weight: bold;
@@ -142,7 +137,6 @@ label {
     width: 100%;
     max-width: 500px;
     box-sizing: border-box;
-
     display: block;
     margin: 10px auto;
     padding: 1%;
@@ -160,13 +154,7 @@ label {
 textarea {
     max-width: 500px;
 }
-#conS2 {
-    width: 90%;
-    padding: 2%;
-    padding-bottom: 4%;
-    background-color: lightcyan;
-    border-radius: 10px;
-}
+/* contact sect 2 */
 #teamInfo {
     display: flex;
     flex-wrap: wrap;
@@ -179,7 +167,6 @@ textarea {
     max-width: 300px;
     box-sizing: border-box;
     background-color: rgb(86, 120, 153);
-    
     color: aliceblue;
     padding: 2%;
     font-weight: bold;
@@ -194,12 +181,15 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 3% auto;
+    padding: 2% 5% 3%;
     background-color: beige;
     color: darkturquoise;
     border-radius: 10px;
     max-width: 800px;
+}
+.learn-section{
+    min-width: 570px;
 }
 .tip-section img {
     max-width: 150px;
