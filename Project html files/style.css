@@ -204,14 +204,14 @@ textarea {
     flex-direction: column;
     align-items: center;
     margin: 20px auto;
-    padding: 20px;
+    padding: 3%;
     background-color: beige;
     color: darkturquoise;
     border-radius: 10px;
     max-width: 800px;
 }
 .question {
-    margin-bottom: 15px;
+    padding: 3%;
 }
 
 .quizBtn {
@@ -232,7 +232,7 @@ textarea {
 .cal-body {          
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 120vh;
 }
 
 .cal-form{
