@@ -1,3 +1,14 @@
+
+
+
+/* fade out effect when cursor move over the item*/
+a img:hover{
+    opacity: 0.7;
+}
+a:hover{
+    color: aquamarine;
+}
+
 body{
     font-family:monospace;
     color: white;
