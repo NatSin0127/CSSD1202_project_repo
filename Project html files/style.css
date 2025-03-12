@@ -175,6 +175,10 @@ img.contact-image{
 .blk-title{
     font-size: x-large;
 }
+.q{
+    font-weight: bold;
+    color: darkcyan;
+}
 
 /* only home */
 #feature{
