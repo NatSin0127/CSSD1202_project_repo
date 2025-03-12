@@ -98,7 +98,7 @@ img.contact-image{
         .home-main{
             margin-top: 200px;
         }
-        .abt-main, .cal-main{
+        .abt-main, .contact-main,.tip-main, .learn-main, .quiz-main, .cal-main{
             margin-top: 180px; 
         }
         .home-image{
