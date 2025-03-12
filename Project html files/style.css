@@ -94,9 +94,11 @@ img.contact-image{
             width: 300px;
         }       
     }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 742px) {
+        
         .home-main, .abt-main, .cal-main{
             margin-top: 220px;
+            
         }
         .home-image{
             height: 120px;
@@ -109,8 +111,18 @@ img.contact-image{
         img.contact-image {
             width: 300px;
         }
+
+        .contact-section{
+            max-width: 300px;
+            margin: auto;
+        }
+        
+        .learn-section{
+            margin: auto;
+            scale: 0.5;
+        }
+       
         /*
-        feedbk form tooo narrow
         learn need adjust utube tiles
         */
     }
@@ -126,7 +138,7 @@ img.contact-image{
     margin: 5% auto;
 }
 #conS1 {
-    padding: 3% 0%;
+    padding: 3% 5% ;
     max-width: 700px;
     background-color: beige;
     color: darkturquoise;
@@ -135,7 +147,7 @@ img.contact-image{
 }
 #conS2 {
     max-width: 1000px;
-    padding: 2% 2% 3%;
+    padding: 10px 2% 30px;
     background-color: lightcyan;
     border-radius: 10px;
     text-align: center;
@@ -177,7 +189,7 @@ label {
     font-weight: bold;
 }
 #fill input, .contactBtn, textarea {
-    width: 100%;
+    width: 80%;
     max-width: 500px;
     box-sizing: border-box;
     display: block;
