@@ -1,6 +1,4 @@
 
-
-
 /* fade out effect when cursor move over the item*/
 a img:hover{
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* shadow */
@@ -31,21 +29,22 @@ header{
 }
 
 nav{
-    padding: 2px;
-    padding-left: 3%;
+    padding: 2%;
     color: peachpuff;
     font-weight: bold;
     font-size: 16px;
 }
 .nav-1{
     background-color: cadetblue;
+    display: flex;
+    gap: 2%;
 }
 .nav-2 {
     background-color: steelblue;
     display: flex;
     justify-content: left;
     align-items: left;
-    min-height: 40px; 
+    gap: 2%;
 }
 
 footer{
@@ -89,16 +88,18 @@ img.contact-image{
     margin: auto;
     width: 500px;
 }
-    @media screen and (max-width: 992px) {
-        img.contact-image {
-            width: 300px;
-        }       
-    }
+  
     @media screen and (max-width: 742px) {
         
-        .home-main, .abt-main, .cal-main{
-            margin-top: 220px;
-            
+        .nav-1{
+            display: flex;
+            gap: 30px;
+        }
+        .home-main{
+            margin-top: 200px;
+        }
+        .abt-main, .cal-main{
+            margin-top: 180px; 
         }
         .home-image{
             height: 120px;
@@ -112,19 +113,22 @@ img.contact-image{
             width: 300px;
         }
 
-        .contact-section{
+        .contact-section, .learn-section{
             max-width: 300px;
             margin: auto;
         }
-        
-        .learn-section{
-            margin: auto;
-            scale: 0.5;
+        .socmed{
+            height: 40px;
         }
-       
-        /*
-        learn need adjust utube tiles
-        */
+        .logo {
+            width: 120px;
+            height: 120px;
+        }
+        #edf{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+        }
     }
 
 
@@ -210,13 +214,14 @@ textarea {
     max-width: 500px;
 }
 /* contact sect 2 */
-#teamInfo {
+#teamInfo{
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
     gap: 10px;
 }
+
 #harris, #courage, #nat {
     flex: 1 1 300px;
     max-width: 300px;
@@ -232,7 +237,7 @@ textarea {
     text-align: center;
 }
 
-/* only tip*/
+/* tip and learn*/
 .tip-section, .learn-section {
     display: flex;
     align-items: center;
@@ -244,14 +249,25 @@ textarea {
     border-radius: 10px;
     max-width: 800px;
 }
-.learn-section{
-    min-width: 570px;
-}
-.tip-section img {
+.tip-section img, .logo {
     max-width: 150px;
     height: auto;
     border-radius: 10px;
     margin-left: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+}
+#edf{
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+}
+.socicons{
+    display: flex;
+    gap: 50px;
 }
 
 /* only quiz */
