@@ -43,13 +43,10 @@ nav{
 .nav-2 {
     background-color: steelblue;
     display: flex;
-    justify-content: center; 
-    align-items: center;
-    padding: 10px 0;
+    justify-content: left;
+    align-items: left;
     min-height: 40px; 
 }
-
-
 
 footer{
     padding: 4%;
