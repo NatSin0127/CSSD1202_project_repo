@@ -10,7 +10,7 @@ a:hover{
 }
 
 body{
-    font-family:monospace;
+    font-family:monospace, Arial, Helvetica, sans-serif;
     color: white;
     background-color: skyblue;
     margin: 0;
@@ -40,9 +40,16 @@ nav{
 .nav-1{
     background-color: cadetblue;
 }
-.nav-2{
+.nav-2 {
     background-color: steelblue;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px 0;
+    min-height: 40px; 
 }
+
+
 
 footer{
     padding: 4%;
@@ -55,10 +62,10 @@ a {
 }
 
 .home-main {
-    margin-top: 175px;
+    margin-top: 208px;
 }
 .abt-main, .contact-main,.tip-main, .learn-main, .quiz-main, .cal-main{
-    margin-top: 175px;
+    margin-top: 200px;
     padding: 3% 10%;
 }
 
@@ -107,6 +114,7 @@ a {
     padding: 2% 2% 3%;
     background-color: lightcyan;
     border-radius: 10px;
+    text-align: center;
 }
 
 .home-title, .contact-title, .abt-title, .tip-title, .learn-title, .cal-title{
@@ -182,6 +190,7 @@ textarea {
     padding: 2%;
     font-weight: bold;
     border-radius: 10px;
+    
 }
 #name {
     text-align: center;
@@ -273,3 +282,49 @@ textarea {
     cursor: pointer;
     border-radius: 5px;
 }
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.home-main, .abt-main, .contact-main, .tip-main, .learn-main, .quiz-main, .cal-main {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+
+.home-image img, .contact-image img, .tip-section img {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out forwards;
+    animation-delay: 0.2s; 
+    border: 3px solid black
+}
+
+:target .home-main,
+:target .abt-main,
+:target .contact-main,
+:target .tip-main,
+:target .learn-main,
+:target .quiz-main,
+:target .cal-main {
+    opacity: 1;
+}
+
+#feature,
+.home-image,
+#conS1,
+.tip-section,
+.learn-section,
+.quiz-section,
+.cal-form {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* shadow */
+}
+
