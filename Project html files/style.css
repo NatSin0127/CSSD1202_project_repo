@@ -1,24 +1,25 @@
-
 /* fade out effect when cursor move over the item*/
-a img:hover{
+a img:hover {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* shadow */
 }
-a:hover{
+
+a:hover {
     color: aquamarine;
 }
 
-body{
-    font-family:monospace, Arial, Helvetica, sans-serif;
+body {
+    font-family: monospace, Arial, Helvetica, sans-serif;
     color: white;
     background-color: skyblue;
     margin: 0;
+    padding-top: 15px;
 }
 
-header{
-    width:100%;
-    position: absolute; 
+header {
+    width: 100%;
+    position: absolute;
     /*position chg to 'fix' can fix the nav at top but
-     when jump to section, some contents hide behide*/
+     when jump to section, some contents hide behine*/
     top: 0;
     background-color: aliceblue;
 }
@@ -28,26 +29,29 @@ header{
     color: midnightblue;
 }
 
-nav{
+nav {
     padding: 2%;
     color: peachpuff;
     font-weight: bold;
     font-size: 16px;
 }
-.nav-1{
-    background-color: cadetblue;
+
+.nav-1, .nav-2 {
     display: flex;
-    gap: 2%;
-}
-.nav-2 {
-    background-color: steelblue;
-    display: flex;
-    justify-content: left;
-    align-items: left;
     gap: 2%;
 }
 
-footer{
+.nav-1 {
+    background-color: cadetblue;
+}
+
+.nav-2 {
+    background-color: steelblue;
+    justify-content: left;
+    align-items: left;
+}
+
+footer {
     padding: 4%;
     color: midnightblue;
 }
@@ -58,9 +62,10 @@ a {
 }
 
 .home-main {
-    margin-top: 208px;
+    margin-top: 275px;
 }
-.abt-main, .contact-main,.tip-main, .learn-main, .quiz-main, .cal-main{
+
+.abt-main, .contact-main, .tip-main, .learn-main, .quiz-main, .cal-main {
     margin-top: 200px;
     padding: 3% 10%;
 }
@@ -72,7 +77,7 @@ a {
     justify-content: center;
 }
 
-.home-image{
+.home-image {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -81,74 +86,152 @@ a {
     height: 200px;
 }
 
-img.contact-image{
+img.contact-image {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: auto;
     width: 500px;
 }
-  
-    @media screen and (max-width: 742px) {
-        
-        .nav-1{
-            display: flex;
-            gap: 30px;
-        }
-        .home-main{
-            margin-top: 200px;
-        }
-        .abt-main, .contact-main,.tip-main, .learn-main, .quiz-main, .cal-main{
-            margin-top: 180px; 
-        }
-        .home-image{
-            height: 120px;
-        }
-        img.home{
-            height: 100px;
-            padding: 5px 0px;
-        }
-        
-        img.contact-image {
-            width: 300px;
-        }
 
-        .contact-section, .learn-section{
-            max-width: 300px;
-            margin: auto;
-        }
-        .socmed{
-            height: 40px;
-        }
-        .logo {
-            width: 120px;
-            height: 120px;
-        }
-        #edf{
-            width: 100px;
-            height: 100px;
-            padding: 10px;
-        }
+/* smaller screen query */
+@media screen and (max-width: 742px) {
+    .nav-1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
     }
 
+    .nav-2 {
+        display: none;
+    }
+
+    .home-main {
+        margin-top: 300px;
+    }
+
+    .abt-main {
+        margin-top: 300px;
+    }
+
+    .contact-main {
+        margin-top: 300px;
+        text-align: center;
+    }
+
+    .tip-main {
+        margin-top: 300px;
+    }
+
+    .learn-main {
+        margin-top: 300px;
+    }
+
+    .quiz-main {
+        margin-top: 350px;
+    }
+
+    .cal-main {
+        margin-top: 300px;
+    }
+
+    .home-image {
+        height: 100px;
+    }
+
+    .abt-title{
+        text-align: center;
+    }
+
+    img.home {
+        height: 70px;
+        padding: 5px 0px;
+    }
+
+    img.contact-image {
+        width: 200px;
+    }
+
+    .contact-section, .learn-section {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .socicons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .socmed {
+        height: 40px;
+    }
+
+    .logo {
+        width: 120px;
+        height: 40px;
+    }
+
+    #edf {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .tip-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tip-title{
+        text-align: center;
+    }
+
+    .tip-section img {
+        width: 50%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    .learn-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .learn-section img {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+    }
+
+    .learn-title {
+        text-align: center;
+    }
+}
 
 .home-section {
     padding: 3% 10%;
 }
-.abt-section{
+
+.abt-section {
     padding-top: 2%;
 }
+
 .contact-section {
     margin: 5% auto;
 }
+
 #conS1 {
-    padding: 3% 5% ;
+    padding: 3% 5%;
     max-width: 700px;
     background-color: beige;
     color: darkturquoise;
     border-radius: 10px;
     text-align: center;
 }
+
 #conS2 {
     max-width: 1000px;
     padding: 10px 2% 30px;
@@ -157,31 +240,35 @@ img.contact-image{
     text-align: center;
 }
 
-.home-title, .contact-title, .abt-title, .tip-title, .learn-title, .cal-title{
+.home-title, .contact-title, .abt-title, .tip-title, .learn-title, .cal-title {
     font-size: xx-large;
     color: rgb(34, 74, 167);
 }
-.para-title, .form-title{
+
+.para-title, .form-title {
     font-size: x-large;
     color: rgb(39, 120, 218);
 }
 
-#para{
+#para {
     text-indent: 5%;
 }
-#para, #line{
+
+#para, #line {
     font-size: large;
 }
-.blk-title{
+
+.blk-title {
     font-size: x-large;
 }
-.q{
+
+.q {
     font-weight: bold;
     color: darkcyan;
 }
 
 /* only home */
-#feature{
+#feature {
     padding: 2% 5%;
     width: 70%;
     background-color: beige;
@@ -190,12 +277,12 @@ img.contact-image{
     border-radius: 15px;
 }
 
-
 /* contact section 1 */
 label {
     font-size: large;
     font-weight: bold;
 }
+
 #fill input, .contactBtn, textarea {
     width: 80%;
     max-width: 500px;
@@ -207,6 +294,7 @@ label {
     border-radius: 5px;
     border: none;
 }
+
 .contactBtn {
     background-color: rgb(21, 187, 189);
     color: white;
@@ -214,11 +302,13 @@ label {
     cursor: pointer;
     width: 30%;
 }
+
 textarea {
     max-width: 500px;
 }
+
 /* contact sect 2 */
-#teamInfo{
+#teamInfo {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -235,13 +325,13 @@ textarea {
     padding: 2%;
     font-weight: bold;
     border-radius: 10px;
-    
 }
+
 #name {
     text-align: center;
 }
 
-/* tip and learn*/
+/* tip and learn */
 .tip-section, .learn-section {
     display: flex;
     align-items: center;
@@ -253,6 +343,7 @@ textarea {
     border-radius: 10px;
     max-width: 800px;
 }
+
 .tip-section img, .logo {
     max-width: 150px;
     height: auto;
@@ -264,12 +355,14 @@ textarea {
     width: 150px;
     height: 150px;
 }
-#edf{
+
+#edf {
     width: 130px;
     height: 130px;
     padding: 10px;
 }
-.socicons{
+
+.socicons {
     display: flex;
     gap: 50px;
 }
@@ -286,6 +379,7 @@ textarea {
     border-radius: 10px;
     max-width: 800px;
 }
+
 .question {
     padding: 3%;
 }
@@ -305,13 +399,13 @@ textarea {
 
 /* only cal */
 
-.cal-body {          
+.cal-body {
     display: flex;
     flex-direction: column;
     min-height: 120vh;
 }
 
-.cal-form{
+.cal-form {
     max-width: 500px;
     width: 100%;
     padding: 2%;
@@ -321,7 +415,8 @@ textarea {
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
-.cal-form input, .cal-form button, .cal-form select{
+
+.cal-form input, .cal-form button, .cal-form select {
     display: block;
     margin: 10px auto;
     padding: 10px;
@@ -331,6 +426,7 @@ textarea {
     text-align: center;
     font-size: 16px;
 }
+
 .cal-form button {
     background-color: rgb(21, 187, 189);
     color: white;
@@ -344,33 +440,21 @@ textarea {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-
-.home-main, .abt-main, .contact-main, .tip-main, .learn-main, .quiz-main, .cal-main {
-    opacity: 0;
-    animation: fadeIn 0.8s ease-out forwards;
-}
-
-
+.home-main, .abt-main, .contact-main, .tip-main, .learn-main, .quiz-main, .cal-main,
 .home-image img, .contact-image img, .tip-section img {
     opacity: 0;
     animation: fadeIn 0.8s ease-out forwards;
-    animation-delay: 0.2s; 
 }
 
-.walkimg{
-    padding: 10px 40px;
-    max-height: 125px;    
-}
-.cartimg{
-    padding: 15px 10px;
-    max-width: 120px;
-   
+.home-image, .contact-image img, #conS1, .tip-section, .learn-section, .quiz-section, .cal-form {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* shadow */
 }
 
 :target .home-main,
@@ -393,4 +477,3 @@ textarea {
 .cal-form {
     box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* shadow */
 }
-
