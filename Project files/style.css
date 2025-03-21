@@ -19,6 +19,59 @@
     --namecard-color: rgb(86, 120, 153, 0.7);
     --namecard-text-color: aliceblue;
     --quiz-q-color: darkcyan;
+    --theme-btn-color: indigo;
+    --theme-btn-fill: aliceblue;
+}
+
+.darkmode{
+    --bkg-color: rgb(59, 58, 58);
+    --text-color: white;
+    --webname-footer-text-color: aliceblue;
+    --webname-bkg-color: midnightblue;
+    --nav-text-color: peachpuff;
+    --nav1-color: rgb(85, 81, 81);
+    --nav2-color: rgb(132, 130, 130);
+    --title-color: rgb(34, 74, 167);
+    --subtitle-color: rgb(39, 120, 218);
+    --link-hover-color: aquamarine;
+    --home-img-color: rgb(86, 120, 153, 0.7);
+    --block-color: rgb(86, 120, 153, 0.7);
+    --block-text-color: rgb(36, 169, 171);
+    --button-color: rgb(21, 187, 189);
+    --button-text-color: white;
+    --teammem-sect-color: lightcyan;
+    --namecard-color: rgb(86, 120, 153, 0.7);
+    --namecard-text-color: aliceblue;
+    --quiz-q-color: darkcyan; 
+    --theme-btn-color: beige;
+    --theme-btn-fill: midnightblue;
+}
+
+#switch-theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: none;
+    height: 50px;
+    width: 50px;
+    background-color: var(--theme-btn-color);
+}
+
+#switch-theme svg {
+    fill: var(--theme-btn-fill);
+}
+
+#switch-theme svg:last-child {
+    display: none;
+}
+
+.darkmode #switch-theme svg:first-child {
+    display: none;
+}
+
+.darkmode #switch-theme svg:last-child {
+    display: block;
 }
 
 a img:hover {
@@ -29,38 +82,47 @@ a:hover {
     color: var(--link-hover-color);
 }
 
-body {
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+}
+
+body{
     font-family: monospace, Arial, Helvetica, sans-serif;
     color: var(--text-color);
     background-color: var(--bkg-color);
-    margin: 0;
-    padding-top: 15px;
 }
 
-header {
-    width: 100%;
-    position: absolute;
-    /*position chg to 'fix' can fix the nav at top but
-     when jump to section, some contents hide behine*/
+header{
+    position: fixed;
     top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.heading {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
     background-color: var(--webname-bkg-color);
 }
 
 #webname {
-    padding-left: 20px;
+    flex-grow: 1;
     color: var(--webname-footer-text-color);
-}
-
-nav {
-    padding: 20px;
-    color: var(--nav-text-color);
-    font-weight: bold;
-    font-size: 16px;
 }
 
 .nav-1, .nav-2 {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
     gap: 4%;
+    padding: 20px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: var(--nav-text-color);
 }
 
 .nav-1 {
@@ -68,9 +130,7 @@ nav {
 }
 
 .nav-2 {
-    background-color: var(--nav2-color);
-    justify-content: left;
-    align-items: left;
+    background-color: var(--nav2-color);    
 }
 
 footer {
@@ -84,7 +144,7 @@ a {
 }
 
 .home-main {
-    margin-top: 208px;
+    margin-top: 230px;
 }
 
 .abt-main, .contact-main, .tip-main, .learn-main, .quiz-main, .cal-main {
@@ -94,7 +154,7 @@ a {
 
 .cal-main, #conS1 {
     flex-grow: 1;
-    display: flex; /* default: vertical direction */
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -105,7 +165,10 @@ a {
     justify-content: space-evenly;
     background-color: var(--home-img-color);
     padding: 5% 0%;
-    height: 200px;
+}
+
+img.home {
+    height: 20vh;
 }
 
 img.contact-image {
@@ -434,7 +497,7 @@ textarea {
 
 /* only cal */
 
-.cal-body {
+#cal-body {
     display: flex;
     flex-direction: column;
     min-height: 120vh;
@@ -467,7 +530,7 @@ textarea {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(10px);
     }
 
     to {
