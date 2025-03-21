@@ -1,3 +1,119 @@
+/* smaller screen query */
+@media screen and (max-width: 742px) {
+    .nav-1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .nav-2 {
+        display: none;
+    }
+
+    .home-main {
+        margin-top: 300px;
+    }
+
+    .abt-main {
+        margin-top: 300px;
+    }
+
+    .contact-main {
+        margin-top: 300px;
+        text-align: center;
+    }
+
+    .tip-main {
+        margin-top: 300px;
+    }
+
+    .learn-main {
+        margin-top: 300px;
+    }
+
+    .quiz-main {
+        margin-top: 350px;
+    }
+
+    .cal-main {
+        margin-top: 300px;
+    }
+
+    .home-image {
+        height: 200px;
+    }
+
+    .abt-title{
+        text-align: center;
+    }
+
+    img.home {
+        height: 120px;
+        padding: 5px 0px;
+    }
+
+    img.contact-image {
+        width: 200px;
+    }
+
+    .contact-section, .learn-section {
+        max-width: 300px;
+        margin: auto;
+    }
+
+    .socicons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .socmed {
+        height: 40px;
+    }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    #edf {
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+
+    .tip-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .tip-title{
+        text-align: center;
+    }
+
+    .tip-section img {
+        width: 50%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    .learn-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .learn-section img {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px 0;
+    }
+
+    .learn-title {
+        text-align: center;
+    }
+}
 
 :root{
     --bkg-color: skyblue;
@@ -24,19 +140,20 @@
 }
 
 .darkmode{
-    --bkg-color: rgb(59, 58, 58);
+    --bkg-color: #294F6D;
     --text-color: white;
     --webname-footer-text-color: aliceblue;
     --webname-bkg-color: midnightblue;
     --nav-text-color: peachpuff;
-    --nav1-color: rgb(85, 81, 81);
-    --nav2-color: rgb(132, 130, 130);
-    --title-color: rgb(34, 74, 167);
-    --subtitle-color: rgb(39, 120, 218);
+    --nav1-color: #042037;
+    --nav2-color: #123652;
+    --title-color: #afcadf;
+    --subtitle-color: #a1cef0;
     --link-hover-color: aquamarine;
     --home-img-color: rgb(86, 120, 153, 0.7);
-    --block-color: rgb(86, 120, 153, 0.7);
-    --block-text-color: rgb(36, 169, 171);
+    --block-color: #496D89;
+    --blk-title-color: aliceblue;
+    --block-text-color: #bbd7ed;
     --button-color: rgb(21, 187, 189);
     --button-text-color: white;
     --teammem-sect-color: lightcyan;
@@ -74,13 +191,9 @@
     display: block;
 }
 
-a img:hover {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
-}
+/*styling in normal laptop screen size and in light mode*/
 
-a:hover {
-    color: var(--link-hover-color);
-}
+/*common styling in all webpages*/
 
 * {
     box-sizing: border-box;
@@ -135,13 +248,23 @@ header{
 
 footer {
     padding: 4%;
-    color: var(--webname-footer-color);
+    color: var(--webname-footer-text-color);
 }
 
 a {
     color: inherit;
     text-decoration: none;
 }
+
+a img:hover {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/*styling specifications in diff webpages*/
 
 .home-main {
     margin-top: 230px;
@@ -163,12 +286,13 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: center;
     background-color: var(--home-img-color);
-    padding: 5% 0%;
+    padding: 3% 0%;
 }
 
 img.home {
-    height: 20vh;
+    height: 150px;
 }
 
 img.contact-image {
@@ -179,123 +303,6 @@ img.contact-image {
     width: 500px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* smaller screen query */
-@media screen and (max-width: 742px) {
-    .nav-1 {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .nav-2 {
-        display: none;
-    }
-
-    .home-main {
-        margin-top: 300px;
-    }
-
-    .abt-main {
-        margin-top: 300px;
-    }
-
-    .contact-main {
-        margin-top: 300px;
-        text-align: center;
-    }
-
-    .tip-main {
-        margin-top: 300px;
-    }
-
-    .learn-main {
-        margin-top: 300px;
-    }
-
-    .quiz-main {
-        margin-top: 350px;
-    }
-
-    .cal-main {
-        margin-top: 300px;
-    }
-
-    .home-image {
-        height: 100px;
-    }
-
-    .abt-title{
-        text-align: center;
-    }
-
-    img.home {
-        height: 70px;
-        padding: 5px 0px;
-    }
-
-    img.contact-image {
-        width: 200px;
-    }
-
-    .contact-section, .learn-section {
-        max-width: 300px;
-        margin: auto;
-    }
-
-    .socicons {
-        display: flex;
-        justify-content: center;
-    }
-
-    .socmed {
-        height: 40px;
-    }
-
-    .logo {
-        width: 120px;
-        height: 40px;
-    }
-
-    #edf {
-        width: 100px;
-        height: 100px;
-        padding: 10px;
-    }
-
-    .tip-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .tip-title{
-        text-align: center;
-    }
-
-    .tip-section img {
-        width: 50%;
-        max-width: 300px;
-        margin: 10px 0;
-    }
-
-    .learn-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .learn-section img {
-        width: 100%;
-        max-width: 400px;
-        margin: 10px 0;
-    }
-
-    .learn-title {
-        text-align: center;
-    }
 }
 
 .home-section {
@@ -347,11 +354,12 @@ img.contact-image {
 
 .blk-title {
     font-size: x-large;
+    color: var(--blk-title-color);
 }
 
 .q {
     font-weight: bold;
-    color: var(--quiz-q-color);
+    color: var(--blk-title-color);
 }
 
 /* only home */
@@ -424,12 +432,25 @@ textarea {
 }
 
 /* tip and learn */
+
+.org-intro, .tips {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.learn-section div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .tip-section, .learn-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin: 3% auto;
-    padding: 2% 5% 3%;
+    padding: 5% 8%;
     background-color: var(--block-color);
     color: var(--block-text-color);
     border-radius: 10px;
@@ -460,9 +481,8 @@ textarea {
 }
 
 #edf {
-    width: 130px;
-    height: 130px;
     padding: 10px;
+    background-color: white;
 }
 
 .socicons {
