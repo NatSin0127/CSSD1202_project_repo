@@ -1,16 +1,38 @@
-/* fade out effect when cursor move over the item*/
+
+:root{
+    --bkg-color: skyblue;
+    --text-color: white;
+    --webname-footer-text-color: midnightblue;
+    --webname-bkg-color: aliceblue;
+    --nav-text-color: peachpuff;
+    --nav1-color: cadetblue;
+    --nav2-color: steelblue;
+    --title-color: rgb(34, 74, 167);
+    --subtitle-color: rgb(39, 120, 218);
+    --link-hover-color: aquamarine;
+    --home-img-color: beige;
+    --block-color: beige;
+    --block-text-color: darkturquoise;
+    --button-color: rgb(21, 187, 189);
+    --button-text-color: white;
+    --teammem-sect-color: lightcyan;
+    --namecard-color: rgb(86, 120, 153, 0.7);
+    --namecard-text-color: aliceblue;
+    --quiz-q-color: darkcyan;
+}
+
 a img:hover {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* shadow */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
 }
 
 a:hover {
-    color: aquamarine;
+    color: var(--link-hover-color);
 }
 
 body {
     font-family: monospace, Arial, Helvetica, sans-serif;
-    color: white;
-    background-color: skyblue;
+    color: var(--text-color);
+    background-color: var(--bkg-color);
     margin: 0;
     padding-top: 15px;
 }
@@ -21,39 +43,39 @@ header {
     /*position chg to 'fix' can fix the nav at top but
      when jump to section, some contents hide behine*/
     top: 0;
-    background-color: aliceblue;
+    background-color: var(--webname-bkg-color);
 }
 
 #webname {
-    padding-left: 2%;
-    color: midnightblue;
+    padding-left: 20px;
+    color: var(--webname-footer-text-color);
 }
 
 nav {
-    padding: 2%;
-    color: peachpuff;
+    padding: 20px;
+    color: var(--nav-text-color);
     font-weight: bold;
     font-size: 16px;
 }
 
 .nav-1, .nav-2 {
     display: flex;
-    gap: 2%;
+    gap: 4%;
 }
 
 .nav-1 {
-    background-color: cadetblue;
+    background-color: var(--nav1-color);
 }
 
 .nav-2 {
-    background-color: steelblue;
+    background-color: var(--nav2-color);
     justify-content: left;
     align-items: left;
 }
 
 footer {
     padding: 4%;
-    color: midnightblue;
+    color: var(--webname-footer-color);
 }
 
 a {
@@ -62,7 +84,7 @@ a {
 }
 
 .home-main {
-    margin-top: 275px;
+    margin-top: 208px;
 }
 
 .abt-main, .contact-main, .tip-main, .learn-main, .quiz-main, .cal-main {
@@ -81,7 +103,7 @@ a {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    background-color: beige;
+    background-color: var(--home-img-color);
     padding: 5% 0%;
     height: 200px;
 }
@@ -92,6 +114,8 @@ img.contact-image {
     align-items: center;
     margin: auto;
     width: 500px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* smaller screen query */
@@ -226,8 +250,8 @@ img.contact-image {
 #conS1 {
     padding: 3% 5%;
     max-width: 700px;
-    background-color: beige;
-    color: darkturquoise;
+    background-color: var(--block-color);
+    color: var(--block-text-color);
     border-radius: 10px;
     text-align: center;
 }
@@ -235,19 +259,19 @@ img.contact-image {
 #conS2 {
     max-width: 1000px;
     padding: 10px 2% 30px;
-    background-color: lightcyan;
+    background-color: var(--teammem-sect-color);
     border-radius: 10px;
     text-align: center;
 }
 
 .home-title, .contact-title, .abt-title, .tip-title, .learn-title, .cal-title {
     font-size: xx-large;
-    color: rgb(34, 74, 167);
+    color: var(--title-color);
 }
 
 .para-title, .form-title {
     font-size: x-large;
-    color: rgb(39, 120, 218);
+    color: var(--subtitle-color);
 }
 
 #para {
@@ -264,15 +288,15 @@ img.contact-image {
 
 .q {
     font-weight: bold;
-    color: darkcyan;
+    color: var(--quiz-q-color);
 }
 
 /* only home */
 #feature {
     padding: 2% 5%;
     width: 70%;
-    background-color: beige;
-    color: darkturquoise;
+    background-color: var(--block-color);
+    color: var(--block-text-color);
     margin: auto;
     border-radius: 15px;
 }
@@ -295,11 +319,15 @@ label {
     border: none;
 }
 
-.contactBtn {
-    background-color: rgb(21, 187, 189);
-    color: white;
+.contactBtn, .quizBtn, .cal-form button {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
     font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
+}
+
+.contactBtn {
     width: 30%;
 }
 
@@ -320,11 +348,12 @@ textarea {
     flex: 1 1 300px;
     max-width: 300px;
     box-sizing: border-box;
-    background-color: rgb(86, 120, 153);
-    color: aliceblue;
+    background-color: var(--namecard-color);
+    color: var(--namecard-text-color);
     padding: 2%;
     font-weight: bold;
     border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 #name {
@@ -338,17 +367,28 @@ textarea {
     justify-content: space-between;
     margin: 3% auto;
     padding: 2% 5% 3%;
-    background-color: beige;
-    color: darkturquoise;
+    background-color: var(--block-color);
+    color: var(--block-text-color);
     border-radius: 10px;
     max-width: 800px;
 }
 
 .tip-section img, .logo {
-    max-width: 150px;
-    height: auto;
+    float: inline-end;
+    max-height: 150px;
+    width: auto;
     border-radius: 10px;
     margin-left: 20px;
+}
+
+.walkimg{
+    padding: 10px 40px;
+    height: 120px;
+}
+
+.cartimg{
+    padding: 15px 10px;
+    max-width: 130px;
 }
 
 .logo {
@@ -374,8 +414,8 @@ textarea {
     align-items: center;
     margin: 20px auto;
     padding: 3%;
-    background-color: beige;
-    color: darkturquoise;
+    background-color: var(--block-color);
+    color: var(--block-text-color);
     border-radius: 10px;
     max-width: 800px;
 }
@@ -389,12 +429,7 @@ textarea {
     margin: 20px auto;
     padding: 10px 20px;
     font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    background-color: rgb(21, 187, 189);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+    border: none;   
 }
 
 /* only cal */
@@ -409,8 +444,8 @@ textarea {
     max-width: 500px;
     width: 100%;
     padding: 2%;
-    background-color: beige;
-    color: darkturquoise;
+    background-color: var(--block-color);
+    color: var(--block-text-color);
     border-radius: 10px;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
@@ -422,18 +457,12 @@ textarea {
     padding: 10px;
     width: 80%;
     border: none;
-    background-color: white;
     text-align: center;
     font-size: 16px;
 }
 
-.cal-form button {
-    background-color: rgb(21, 187, 189);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-}
+
+
 
 @keyframes fadeIn {
     from {
@@ -453,10 +482,6 @@ textarea {
     animation: fadeIn 0.8s ease-out forwards;
 }
 
-.home-image, .contact-image img, #conS1, .tip-section, .learn-section, .quiz-section, .cal-form {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* shadow */
-}
-
 :target .home-main,
 :target .abt-main,
 :target .contact-main,
@@ -467,13 +492,10 @@ textarea {
     opacity: 1;
 }
 
-#feature,
-.home-image,
-.contact-image img,
-#conS1,
-.tip-section,
-.learn-section,
-.quiz-section,
-.cal-form {
-    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7); /* shadow */
+#feature, .home-image, .contact-image img, .tip-section, .learn-section, .quiz-section, .cal-form {
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+#conS1, #conS2 {
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
