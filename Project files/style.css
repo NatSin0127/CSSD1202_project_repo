@@ -143,26 +143,29 @@
 }
 
 .darkmode{
-    --bkg-color: #294F6D;
-    --text-color: #bbd7ed;
-    --webname-footer-text-color: aliceblue;
     --webname-bkg-color: midnightblue;
-    --nav-text-color: peachpuff;
+    --webname-footer-text-color: aliceblue;
     --nav1-color: #042037;
     --nav2-color: #123652;
-    --title-color: white;
-    --subtitle-color: lightcyan;
-    --link-hover-color: aquamarine;
-    --home-img-color: #496D89;
+    --nav-text-color: peachpuff;
+    --link-hover-color: rgb(30, 225, 238);
+    --bkg-color: #294F6D;
+
+    --text-color: #bbd7ed; /*#bbd7ed;*/
+    --title-color: aliceblue;
+    --subtitle-color: rgb(149, 241, 248); /*rgb(168, 233, 238);*/
     --block-color: #496D89;
-    --blk-title-color: lightcyan;
+    --blk-title-color: rgb(110, 238, 247);
+    --quiz-q-color: darkcyan; 
     --block-text-color: #bbd7ed;
+
+    --home-img-color: #496D89;
+    --teammem-sect-color: #496D89;
+    --namecard-color: rgb(123, 152, 186); /* rgb(132, 218, 244);*/
+    --namecard-text-color: aliceblue;
+
     --button-color: rgb(21, 187, 189);
     --button-text-color: white;
-    --teammem-sect-color: #496D89;
-    --namecard-color: rgb(80, 183, 215); /* rgb(132, 218, 244);*/
-    --namecard-text-color: lightcyan;
-    --quiz-q-color: darkcyan; 
     --theme-btn-color: beige;
     --theme-btn-fill: midnightblue;
     --top-btn-color: aliceblue;
@@ -239,6 +242,7 @@
 }
 
 body{
+    font-size: 18px;
     font-family: monospace, Arial, Helvetica, sans-serif;
     color: var(--text-color);
     background-color: var(--bkg-color);
@@ -339,7 +343,16 @@ img.home {
 }
 
 .abt-section {
-    padding-top: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.abt-maindiv {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
 }
 
 img.contact-image {
@@ -376,33 +389,51 @@ img.contact-image {
     text-align: center;
 }
 
-.home-title, .contact-title, .abt-title, .tip-title, .learn-title, .cal-title {
+/*title*/
+.title {
     font-size: xx-large;
     color: var(--title-color);
 }
-
-.para-title, .form-title {
+/*subtitle*/
+.subtitle {
     font-size: x-large;
     color: var(--subtitle-color);
 }
-
-#para {
-    text-indent: 5%;
-}
-
-#para, #line {
-    font-size: large;
-}
-
-.blk-title {
+/*para/blk title*/
+.para-title, .blk-title {
     font-size: x-large;
+    color: var(--blk-title-color);
+}
+
+.form-title {
+    font-size: x-large;
+    color: var(--title-color);
+}
+
+.cal-title {
+    font-size: xx-large;
     color: var(--blk-title-color);
 }
 
 .q {
     font-weight: bold;
-    color: var(--blk-title-color);
+    color: var(--subtitle-color);
 }
+
+#quiz-title {
+    font-size: 26px;
+}
+
+/*text: para/line*/
+#para {
+    text-indent: 5%;
+}
+
+#para, #line {
+    font-size: 18px;
+}
+
+
 
 /* only home */
 #feature {
@@ -420,7 +451,7 @@ label {
     font-weight: bold;
 }
 
-#fill input, .contactBtn, textarea {
+#fill input, #contactBtn, textarea {
     width: 80%;
     max-width: 500px;
     box-sizing: border-box;
@@ -432,7 +463,7 @@ label {
     border: none;
 }
 
-.contactBtn, .quizBtn, .cal-form button {
+#contactBtn, .quizBtn, .cal-form button {
     background-color: var(--button-color);
     color: var(--button-text-color);
     font-weight: bold;
@@ -440,7 +471,7 @@ label {
     border-radius: 5px;
 }
 
-.contactBtn {
+#contactBtn {
     width: 30%;
 }
 
@@ -539,9 +570,10 @@ textarea {
 .quiz-section {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin: 20px auto;
-    padding: 5% 8%;
+    padding: 5%;
     background-color: var(--block-color);
     color: var(--block-text-color);
     border-radius: 10px;

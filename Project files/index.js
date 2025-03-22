@@ -29,3 +29,10 @@ toTop.addEventListener("click", () => {
         }, 10);
     }
 })
+
+// contact.html feedback form button
+const contactBtn = document.getElementById('contactBtn');
+
+contactBtn.addEventListener("click", () => {
+    alert("You have submitted your feedback.\nThank you !")
+})
