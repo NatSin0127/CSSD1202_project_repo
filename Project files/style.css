@@ -276,6 +276,7 @@ a:hover {
 }
 
 .cal-main, #conS1 {
+    margin-top: 30vh;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -364,8 +365,8 @@ img.contact-image {
 
 /* only home */
 #feature {
-    padding: 2% 5%;
-    width: 70%;
+    padding: 5% 7%;
+    width: 95%;
     background-color: var(--block-color);
     color: var(--block-text-color);
     margin: auto;
@@ -407,12 +408,12 @@ textarea {
 }
 
 /* contact sect 2 */
-#teamInfo {
+.teamInfo {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
     justify-content: space-evenly;
-    gap: 10px;
+    gap: 30px;
 }
 
 #harris, #courage, #nat {
@@ -436,6 +437,8 @@ textarea {
 .org-intro, .tips {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     gap: 30px;
     margin-top: 20px;
 }
@@ -448,9 +451,9 @@ textarea {
 
 .tip-section, .learn-section {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 5% 8%;
+    align-items: center;
+    padding: 5%;
     background-color: var(--block-color);
     color: var(--block-text-color);
     border-radius: 10px;
@@ -458,8 +461,8 @@ textarea {
 }
 
 .tip-section img, .logo {
-    float: inline-end;
-    max-height: 150px;
+    
+    height: 150px;
     width: auto;
     border-radius: 10px;
     margin-left: 20px;
@@ -472,7 +475,7 @@ textarea {
 
 .cartimg{
     padding: 15px 10px;
-    max-width: 130px;
+    
 }
 
 .logo {
@@ -491,12 +494,13 @@ textarea {
 }
 
 /* only quiz */
+
 .quiz-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 20px auto;
-    padding: 3%;
+    padding: 5% 8%;
     background-color: var(--block-color);
     color: var(--block-text-color);
     border-radius: 10px;
@@ -504,7 +508,10 @@ textarea {
 }
 
 .question {
-    padding: 3%;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
 }
 
 .quizBtn {
@@ -520,16 +527,14 @@ textarea {
 #cal-body {
     display: flex;
     flex-direction: column;
-    min-height: 120vh;
 }
 
 .cal-form {
-    max-width: 500px;
-    width: 100%;
-    padding: 2%;
+    width: fit-content;
+    padding: 5% 8%;
     background-color: var(--block-color);
     color: var(--block-text-color);
-    border-radius: 10px;
+    border-radius: 15px;
     text-align: center;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
