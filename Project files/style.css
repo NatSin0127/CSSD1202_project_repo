@@ -1,10 +1,11 @@
 /* smaller screen query */
 @media screen and (max-width: 742px) {
-    .nav-1 {
-        flex-direction: column;
+
+    .nav-1, .nav-2 {
+        display: flex;
+        justify-content: flex-start;
         align-items: center;
-        gap: 10px;
-        text-align: center;
+        gap: 1%;        
     }
 
     .nav-2 {
@@ -137,31 +138,67 @@
     --quiz-q-color: darkcyan;
     --theme-btn-color: indigo;
     --theme-btn-fill: aliceblue;
+    --top-btn-color: steelblue;
+    --top-btn-fill: aliceblue;
 }
 
 .darkmode{
     --bkg-color: #294F6D;
-    --text-color: white;
+    --text-color: #bbd7ed;
     --webname-footer-text-color: aliceblue;
     --webname-bkg-color: midnightblue;
     --nav-text-color: peachpuff;
     --nav1-color: #042037;
     --nav2-color: #123652;
-    --title-color: #afcadf;
-    --subtitle-color: #a1cef0;
+    --title-color: white;
+    --subtitle-color: lightcyan;
     --link-hover-color: aquamarine;
-    --home-img-color: rgb(86, 120, 153, 0.7);
+    --home-img-color: #496D89;
     --block-color: #496D89;
-    --blk-title-color: aliceblue;
+    --blk-title-color: lightcyan;
     --block-text-color: #bbd7ed;
     --button-color: rgb(21, 187, 189);
     --button-text-color: white;
-    --teammem-sect-color: lightcyan;
-    --namecard-color: rgb(86, 120, 153, 0.7);
-    --namecard-text-color: aliceblue;
+    --teammem-sect-color: #496D89;
+    --namecard-color: rgb(80, 183, 215); /* rgb(132, 218, 244);*/
+    --namecard-text-color: lightcyan;
     --quiz-q-color: darkcyan; 
     --theme-btn-color: beige;
     --theme-btn-fill: midnightblue;
+    --top-btn-color: aliceblue;
+    --top-btn-fill: midnightblue;
+}
+
+#top-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    border-radius: 50%;
+    border: none;
+    height: 12vw;
+    width: 12vw;
+    max-height: 60px;
+    max-width: 60px;
+    position: fixed;
+    bottom: 70px;
+    right: 3vw;
+    background-color: var(--top-btn-color);
+}
+
+#top-btn svg {
+    height: 6vw;
+    width: 6vw;
+    max-height: 28px;
+    max-width: 28px;
+    fill: var(--top-btn-fill);
+}
+
+#top-btn p {
+    font-size: 11px;
+    font-weight: bold;
+    color: var(--top-btn-fill);
 }
 
 #switch-theme {
@@ -232,7 +269,7 @@ header{
     justify-content: flex-start;
     align-items: center;
     gap: 4%;
-    padding: 20px 30px;
+    padding: 20px 25px;
     font-weight: bold;
     font-size: 16px;
     color: var(--nav-text-color);
@@ -275,7 +312,7 @@ a:hover {
     padding: 3% 10%;
 }
 
-.cal-main, #conS1 {
+.cal-main {
     margin-top: 30vh;
     flex-grow: 1;
     display: flex;
@@ -290,20 +327,11 @@ a:hover {
     align-items: center;
     background-color: var(--home-img-color);
     padding: 3% 0%;
+    width: 100vw;
 }
 
 img.home {
     height: 150px;
-}
-
-img.contact-image {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    width: 500px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .home-section {
@@ -314,8 +342,21 @@ img.contact-image {
     padding-top: 2%;
 }
 
-.contact-section {
-    margin: 5% auto;
+img.contact-image {
+    display: flex;
+    margin: 30px auto;
+    width: 70vw;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.con-maindiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin-top: 20px;
 }
 
 #conS1 {
@@ -329,7 +370,7 @@ img.contact-image {
 
 #conS2 {
     max-width: 1000px;
-    padding: 10px 2% 30px;
+    padding: 5% 3% 7%;
     background-color: var(--teammem-sect-color);
     border-radius: 10px;
     text-align: center;

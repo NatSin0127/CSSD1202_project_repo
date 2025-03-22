@@ -1,4 +1,4 @@
-
+// theme switch button
 let darkmode = localStorage.getItem('darkmode');
 const switchTheme = document.getElementById('switch-theme');
 
@@ -17,4 +17,15 @@ if (darkmode === "active") enableDarkmode()
 switchTheme.addEventListener("click", () => {
     darkmode = localStorage.getItem('darkmode')
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
+
+// to top button
+const toTop = document.getElementById('top-btn');
+
+toTop.addEventListener("click", () => {
+    if (window.scrollY != 0) {
+        setTimeout(function () {
+            window.scrollTo(0, window.scrollY - 2500);
+        }, 10);
+    }
 })
