@@ -188,6 +188,7 @@
     bottom: 70px;
     right: 3vw;
     background-color: var(--top-btn-color);
+    cursor: pointer;
 }
 
 #top-btn svg {
@@ -213,6 +214,7 @@
     height: 50px;
     width: 50px;
     background-color: var(--theme-btn-color);
+    cursor: pointer;
 }
 
 #switch-theme svg {
@@ -231,7 +233,52 @@
     display: block;
 }
 
-/*styling in normal laptop screen size and in light mode*/
+/*contact.html: pop-up msg after submit feedback*/
+.msg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+.close-pop {
+    margin-top: 3px;
+    background-color: #042037;
+    color: aquamarine;
+    padding: 1%;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.pop-up {
+    background-color: aquamarine;
+    color: #042037;
+    width: 50vw;
+    height: fit-content;
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5%;
+}
+
+.pop-up {
+    opacity: 0;
+    z-index: -1;
+}
+
+.pop-up.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+
+/* STYLING in NORMAL laptop screen size and in LIGHT mode -----------------------------------------------*/
 
 /*common styling in all webpages*/
 
@@ -372,22 +419,6 @@ img.contact-image {
     margin-top: 20px;
 }
 
-#conS1 {
-    padding: 3% 5%;
-    max-width: 700px;
-    background-color: var(--block-color);
-    color: var(--block-text-color);
-    border-radius: 10px;
-    text-align: center;
-}
-
-#conS2 {
-    max-width: 1000px;
-    padding: 5% 3% 7%;
-    background-color: var(--teammem-sect-color);
-    border-radius: 10px;
-    text-align: center;
-}
 
 /*title*/
 .title {
@@ -408,6 +439,7 @@ img.contact-image {
 .form-title {
     font-size: x-large;
     color: var(--title-color);
+    padding-bottom: 20px;
 }
 
 .cal-title {
@@ -446,40 +478,101 @@ img.contact-image {
 }
 
 /* contact section 1 */
+#conS1 {
+    padding: 40px 40px 20px; /* top LR bottom */
+    width: 80vw;
+    max-width: 700px;
+    margin: auto;
+    background-color: var(--block-color);
+    color: var(--block-text-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fdbkForm {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    gap: 20px;
+    text-align: center;
+}
+
+.field, .field.error {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 label {
     font-size: large;
     font-weight: bold;
 }
 
-#fill input, #contactBtn, textarea {
-    width: 80%;
-    max-width: 500px;
-    box-sizing: border-box;
+.field input {
     display: block;
-    margin: 10px auto;
-    padding: 1%;
+    padding: 7px;
     font-size: 16px;
+    border: 3px solid #f0f0f0;
     border-radius: 5px;
-    border: none;
 }
 
-#contactBtn, .quizBtn, .cal-form button {
-    background-color: var(--button-color);
-    color: var(--button-text-color);
+.field textarea {
+    font-size: 16px;
+    border: 3px solid #f0f0f0;
+    border-radius: 5px;
+}
+
+.contactBtns {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+}
+
+.contactBtns button {
+    padding: 10px;
+    width: 150px;
+    font-size: 14px;
     font-weight: bold;
     cursor: pointer;
+    color: var(--nav2-color);
+    background-color: var(--block-text-color);
+    border: none;
     border-radius: 5px;
+    box-shadow: 2px 3px 5px rgb(255, 255, 255, 0.2);
 }
 
-#contactBtn {
-    width: 30%;
+/*styling related to form validation*/
+.field input:focus, .field textarea:focus {
+    outline: 0;
 }
 
-textarea {
-    max-width: 500px;
+.field.success input, .field.success textarea {
+    border-color: #09c372;
+}
+
+.field.error input, .field.error textarea {
+    border-color: #ff3860;
+}
+
+.field .error { /* error msg styling*/
+    color: #ff3860;
+    font-size: 14px;
+    font-weight: bold;
+    height: 15px;
 }
 
 /* contact sect 2 */
+#conS2 {
+    max-width: 1000px;
+    padding: 5% 3% 7%;
+    background-color: var(--teammem-sect-color);
+    border-radius: 10px;
+    text-align: center;
+}
+
 .teamInfo {
     display: flex;
     flex-wrap: wrap;
@@ -593,6 +686,14 @@ textarea {
     padding: 10px 20px;
     font-size: 16px;
     border: none;   
+}
+
+.quizBtn, .cal-form button {
+    background-color: var(--button-color);
+    color: var(--button-text-color);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 /* only cal */

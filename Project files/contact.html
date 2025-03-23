@@ -47,36 +47,49 @@
                 <img class="contact-image" src="img/contact.png" alt="contact">
             </div>
             <div class="con-maindiv">
-                <section class="contact-section" id="conS1">              
-                    <form action="mailto:nat127@my.yorku.ca" method="post" enctype="multipart/form-data">
+                <section class="contact-section" id="conS1">        
+                    <form class="fdbkForm" id="fbk-form" action="/">
                         <h2 class="form-title">Any Feedback? <br> Your feedback is precious to us!</h2>
-                        <br><br>
-                        <div id="fill">
+                        
+                        <div class="field">
                             <label for="firstname">First Name:</label>
                             <input type="text" name="firstname" id="firstname" size="25" tabindex="1">
+                            <div class="error"></div>
                         </div>
-                        <br><br>
-                        <div id="fill">
-                            <label for="lastname">Last Name: </label><input type="text" name="lastname" id="lastname" size="25" tabindex="2">
+                        <div class="field">
+                            <label for="lastname">Last Name: </label>
+                            <input type="text" name="lastname" id="lastname" size="25" tabindex="2">
+                            <div class="error"></div>
                         </div>
-                        <br><br/>
-                        <div id="fill">
+                        <div class="field">
                             <label for="email">Email: </label>
-                            <input type="text" name="email" id="email" size="35" tabindex="3" />
+                            <input type="text" name="email" id="email" size="35" tabindex="3">
+                            <div class="error"></div>
                         </div>
-                        <br><br>
-                        <div id="fill">
+                        <div class="field">
                             <label for="phone">Mobile Phone number: </label>
                             <input type="text" name="phone" id="phone" size="25" tabindex="4">
+                            <div class="error"></div>
                         </div>
-                        <br><br>
-                        <div id="fill">
+                        <div class="field">
                             <label>Your feedback:</label>
-                            <textarea cols="70" rows="10" maxlength="2000" name="feedback" id="feedback"></textarea>
-                            <br>
+                            <textarea cols="70" rows="10" maxlength="2000" name="feedback" id="feedback" placeholder=" Drop down your thoughts here..."></textarea>
+                            <div class="error"></div>
                         </div>
-                        <button id="contactBtn" type="submit">Submit</button>
+
+                        <div class="contactBtns">
+                            <button id="clear"> Clear</button>
+                            <button id="submit" type="submit">Submit</button>
+                        </div>
                     </form>
+                    <!--pop-up msg-->
+                    <div class="pop-up" id="pop-up">
+                        <div class="msg">
+                            <h2>Thank you !</h2>
+                            <p>Your precious feedback has been sent out to us !</p>
+                            <button class="close-pop" id="close">Close</button>
+                        </div>
+                    </div>
                 <br>
                 </section>
                 <section class="contact-section" id="conS2">
