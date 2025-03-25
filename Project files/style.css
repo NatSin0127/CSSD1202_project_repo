@@ -279,8 +279,6 @@
     max-width: 500px;
     height: fit-content;
     position: fixed;
-    top: 0;
-    left: 0;
     inset: 0;
     margin: auto;
     display: flex;
