@@ -1,6 +1,10 @@
 /* smaller screen query */
 @media screen and (max-width: 742px) {
 
+    header{
+        font-size: medium;
+    }
+
     .nav-1, .nav-2 {
         display: flex;
         justify-content: flex-start;
@@ -9,7 +13,9 @@
     }
 
     .nav-2 {
-        display: none;
+        display: flex;
+        flex-wrap: nowrap;
+        max-height: 60px;
     }
 
     .home-main {
@@ -45,27 +51,38 @@
         height: 200px;
     }
 
-    .abt-title{
-        text-align: center;
-    }
-
     img.home {
         height: 120px;
         padding: 5px 0px;
     }
 
     img.contact-image {
-        width: 200px;
+        width: 100px;
     }
 
     .contact-section, .learn-section {
         max-width: 300px;
-        margin: auto;
+    }
+
+    .learn-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .learn-blk {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .socicons {
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .socmed {
@@ -78,8 +95,6 @@
     }
 
     #edf {
-        width: 100px;
-        height: 100px;
         padding: 10px;
     }
 
@@ -88,30 +103,14 @@
         align-items: center;
         text-align: center;
     }
-
-    .tip-title{
-        text-align: center;
-    }
-
+    
     .tip-section img {
         width: 50%;
-        max-width: 300px;
-        margin: 10px 0;
+        max-height: 130px;
+        margin: 15px 0;
     }
 
-    .learn-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .learn-section img {
-        width: 100%;
-        max-width: 400px;
-        margin: 10px 0;
-    }
-
-    .learn-title {
+    .title {
         text-align: center;
     }
 }
@@ -373,6 +372,18 @@ a:hover {
     color: var(--link-hover-color);
 }
 
+#inds1, #inds2, #inds3 {
+    scroll-margin-top: 190px;
+} 
+
+#conS1, #conS2 {
+    scroll-margin-top: 200px;
+}
+
+#abts1, #abts2, #abts3, #abts4 {
+    scroll-margin-top: 200px;
+}
+
 /*styling specifications in diff webpages*/
 
 .home-main {
@@ -567,7 +578,7 @@ label {
 
 .contactBtns button {
     padding: 10px;
-    width: 150px;
+    width: 30%;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
@@ -650,7 +661,7 @@ label {
 
 .tip-section, .learn-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 5%;
     background-color: var(--block-color);
@@ -659,17 +670,18 @@ label {
     max-width: 800px;
 }
 
-.tip-section img, .logo {
-    
+.learn-blk {
+    margin-right: 10px;
+}
+
+.tip-section a img, .logo {
     height: 150px;
     width: auto;
     border-radius: 10px;
-    margin-left: 20px;
 }
 
 .walkimg{
     padding: 10px 40px;
-    height: 120px;
 }
 
 .cartimg{
@@ -689,7 +701,8 @@ label {
 
 .socicons {
     display: flex;
-    gap: 50px;
+    justify-content: flex-start;
+    gap: 10%;
 }
 
 /* only quiz */
