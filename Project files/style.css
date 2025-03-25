@@ -6,7 +6,6 @@
         justify-content: flex-start;
         align-items: center;
         gap: 1%;
-        height: 20vw;
     }
 
     .nav-2 {
@@ -200,6 +199,7 @@
     right: 3vw;
     background-color: var(--top-btn-color);
     cursor: pointer;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 #top-btn svg {
@@ -226,6 +226,7 @@
     width: 50px;
     background-color: var(--theme-btn-color);
     cursor: pointer;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 #switch-theme svg {
@@ -270,6 +271,7 @@
     border-radius: 5px;
     border-color: linear-gradient(to bottom right, rgb(114, 172, 219), rgb(25, 86, 136));
     cursor: pointer;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .pop-up, .result, .quizresult {
@@ -318,7 +320,7 @@ header{
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
 }
 
 .heading {
@@ -537,6 +539,18 @@ label {
     font-size: 16px;
     border: 3px solid #f0f0f0;
     border-radius: 5px;
+    z-index: 2;
+    width: 100%;
+}
+
+.cal-form input, .cal-form button, .cal-form select {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: none;
+    text-align: center;
+    font-size: 16px;
 }
 
 .field textarea {
@@ -564,24 +578,20 @@ label {
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-.contactBtns button:active {
-    box-shadow: none;
-}
-
 /*styling related to form validation*/
 .field input:focus, .field textarea:focus, .calfield input:focus {
     outline: 0;
 }
 
-.field.success input, .field.success textarea, .calfield.calsuccess input {
+.field.success input, .field.success textarea {
     border-color: #09c372;
 }
 
-.field.error input, .field.error textarea, .calfield.calerror input {
+.field.error input, .field.error textarea {
     border-color: #ff3860;
 }
 
-.field .error, .calfield .calerror { /* error msg styling*/
+.field .error { /* error msg styling*/
     color: #ff3860;
     font-size: 14px;
     font-weight: bold;
@@ -720,10 +730,6 @@ label {
     border-radius: 5px; box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-.quizBtn:active, .cal-form button:active {
-    box-shadow: none;
-}
-
 /* only cal */
 
 #cal-body {
@@ -788,4 +794,16 @@ label {
 
 #conS1, #conS2 {
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.contactBtns button:active, 
+.quizBtn:active, 
+.cal-form button:active, 
+.close-pop:active, 
+.close-result:active, 
+.close-quiz:active
+#top-btn:active,
+#switch-theme:active
+{
+    box-shadow: none;
 }

@@ -82,13 +82,6 @@ document.addEventListener('DOMContentLoaded', () => {
             `; 
             result.classList.add("calopen");
             }
-
-            /*if (!resultsDiv) {
-                resultsDiv = document.createElement('div');
-                resultsDiv.id = 'carbon-results';
-                resultsDiv.className = 'carbon-results'; 
-                calculatorForm.appendChild(resultsDiv);
-            }*/
             else {
             resultsDiv.innerHTML = `
                 <h3>Your Carbon Footprint</h3>
@@ -127,7 +120,7 @@ function getFootprintFeedback(carbonFootprint) {
     }
 };
 
-// Eco-Friendly Quiz
+// Eco-Friendly Quiz-----------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const quizForm = document.querySelector('.quiz-section form'); // Get quiz form
     const quizButton = document.querySelector('.quizBtn'); // Get quiz button
@@ -162,18 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             const percentage = Math.round((score / totalQuestions) * 100);
-            
-            /*
-            let resultsDiv = document.getElementById('quiz-results');
-            if (!resultsDiv) {
-                resultsDiv = document.createElement('div');
-                resultsDiv.id = 'quiz-results';
-                resultsDiv.className = 'quiz-results'; 
-                quizForm.appendChild(resultsDiv);
-            }
-            */          
 
-            
             resultsDiv.innerHTML = `
                 <h3>Quiz Results</h3>
                 <p>Your Score: ${score} out of ${totalQuestions}</p>
@@ -191,7 +173,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
-
 
 function getQuizFeedback(percentage) {
     if (percentage >= 90) {
