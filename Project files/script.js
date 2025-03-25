@@ -74,30 +74,41 @@ document.addEventListener('DOMContentLoaded', () => {
             
             carbonFootprint = transportEmissions + electricityEmissions + dietEmissions;
             
+            const resultsDiv = document.getElementById('result-text');
+
+            if (transportInput.value === "" || electricityInput.value === "" || diet === "") {
+                resultsDiv.innerHTML = `
+                <h3>You haven't completed your input !!!</h3>
+            `; 
+            result.classList.add("calopen");
+            }
+
             /*if (!resultsDiv) {
                 resultsDiv = document.createElement('div');
                 resultsDiv.id = 'carbon-results';
                 resultsDiv.className = 'carbon-results'; 
                 calculatorForm.appendChild(resultsDiv);
             }*/
-            const resultsDiv = document.getElementById('result-text');
+            else {
             resultsDiv.innerHTML = `
-                <h3>Your Carbon Footprint Breakdown:</h3>
-                <p>Transportation Emissions: ${transportEmissions.toFixed(2)} kg CO2</p>
-                <p>Electricity Emissions: ${electricityEmissions.toFixed(2)} kg CO2</p>
-                <p>Diet Emissions: ${dietEmissions.toFixed(2)} kg CO2</p>
-                <p><strong>Total Carbon Footprint: ${carbonFootprint.toFixed(2)} kg CO2 per day</strong></p>
+                <h3>Your Carbon Footprint</h3>
+                <h3>Breakdown:</h3>
+                <p>Transportation Emissions: <br>
+                ${transportEmissions.toFixed(2)} kg CO2</p>
+                <p>Electricity Emissions: <br>
+                ${electricityEmissions.toFixed(2)} kg CO2</p>
+                <p>Diet Emissions: <br>
+                ${dietEmissions.toFixed(2)} kg CO2</p>
+                <p><strong>Total Carbon Footprint: <br>
+                ${carbonFootprint.toFixed(2)} kg CO2 per day</strong></p>
                 <p>${getFootprintFeedback(carbonFootprint)}</p>
             `;
-            
+            result.classList.add("calopen");
+            }
         });
         
-        const submitResult = document.getElementById('calSubmit');
         const closeResult = document.getElementById('calClose');
         
-        submitResult.addEventListener('click', () => {
-            result.classList.add("calopen");
-        });
         closeResult.addEventListener('click', () => {
             result.classList.remove("calopen");
             calculatorForm.reset();
@@ -121,10 +132,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const quizForm = document.querySelector('.quiz-section form'); // Get quiz form
     const quizButton = document.querySelector('.quizBtn'); // Get quiz button
     const quizresult =document.getElementById('quizresult');
-    /*
-    const resultsDiv = document.getElementById('result-text');
-    const submitResult = document.getElementById('calSubmit');
-    */
 
     if (quizButton) {
         quizButton.addEventListener('click', () => {
@@ -143,7 +150,9 @@ document.addEventListener('DOMContentLoaded', () => {
             
             let score = 0;
             let totalQuestions = Object.keys(correctAnswers).length;
+            const resultsDiv = document.getElementById('quizresult-text');
             
+
             Object.keys(correctAnswers).forEach(questionId => {
                 const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
                 
@@ -164,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             */          
 
-            const resultsDiv = document.getElementById('quizresult-text');
+            
             resultsDiv.innerHTML = `
                 <h3>Quiz Results</h3>
                 <p>Your Score: ${score} out of ${totalQuestions}</p>
