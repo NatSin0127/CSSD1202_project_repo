@@ -46,6 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
             this.value = this.value.replace(/[^0-9.]/g, '');
         });
 
+        const result = document.getElementById('result');
+
         calculatorForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const transportKm = parseFloat(document.getElementById('transport').value) || 0;
@@ -72,13 +74,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
             carbonFootprint = transportEmissions + electricityEmissions + dietEmissions;
             
-            let resultsDiv = document.getElementById('carbon-results');
-            if (!resultsDiv) {
+            
+            
+            /*if (!resultsDiv) {
                 resultsDiv = document.createElement('div');
                 resultsDiv.id = 'carbon-results';
                 resultsDiv.className = 'carbon-results'; 
                 calculatorForm.appendChild(resultsDiv);
-            }
+            }*/
             
             resultsDiv.innerHTML = `
                 <h3>Your Carbon Footprint Breakdown:</h3>
@@ -88,9 +91,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 <p><strong>Total Carbon Footprint: ${carbonFootprint.toFixed(2)} kg CO2 per day</strong></p>
                 <p>${getFootprintFeedback(carbonFootprint)}</p>
             `;
+            
+        });
+        const resultsDiv = document.getElementById('result-text');
+        const submitResult = document.getElementById('calSubmit');
+        const closeResult = document.getElementById('calClose');
+        
+        submitResult.addEventListener('click', () => {
+            result.classList.add("calopen");
+        });
+        closeResult.addEventListener('click', () => {
+            result.classList.remove("calopen");
+            calculatorForm.reset();
         });
     }
 });
+
 // foot print feedback 
 function getFootprintFeedback(carbonFootprint) {
     if (carbonFootprint < 2) {
@@ -100,7 +116,7 @@ function getFootprintFeedback(carbonFootprint) {
     } else {
         return "Your carbon footprint is quite high. Consider learning more about being eco friendly to reduce your environmental impact.";
     }
-}
+};
 
 // Eco-Friendly Quiz
 document.addEventListener('DOMContentLoaded', () => {
@@ -164,7 +180,7 @@ function getQuizFeedback(percentage) {
     } else {
         return "You might want to learn more about environmental conservation. Check out our Learn page!";
     }
-}
+};
 
 // contact.html: validate form inputs ------------------------------------
 const form = document.getElementById('fbk-form');

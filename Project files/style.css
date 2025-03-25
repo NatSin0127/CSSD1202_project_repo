@@ -5,7 +5,8 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 1%;        
+        gap: 1%;
+        height: 20vw;
     }
 
     .nav-2 {
@@ -140,6 +141,11 @@
     --theme-btn-fill: aliceblue;
     --top-btn-color: steelblue;
     --top-btn-fill: aliceblue;
+
+    --popmsg-bkgrd: rgb(55, 88, 116);
+    --popmsg-text: aliceblue;
+    --popcloseBtn: steelblue;
+    --popcloseBtn-text: aliceblue;
 }
 
 .darkmode{
@@ -170,6 +176,11 @@
     --theme-btn-fill: midnightblue;
     --top-btn-color: aliceblue;
     --top-btn-fill: midnightblue;
+    
+    --popmsg-bkgrd: #042037;
+    --popmsg-text: aquamarine;
+    --popcloseBtn: aquamarine;
+    --popcloseBtn-text: #042037;
 }
 
 #top-btn {
@@ -234,7 +245,7 @@
 }
 
 /*contact.html: pop-up msg after submit feedback*/
-.msg {
+.msg, .result {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,19 +254,29 @@
     gap: 15px;
 }
 
-.close-pop {
-    margin-top: 3px;
-    background-color: #042037;
-    color: aquamarine;
-    padding: 1%;
-    font-size: 16px;
-    border-radius: 5px;
+.resultDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.pop-up {
-    background-color: aquamarine;
-    color: #042037;
+.close-pop, .close-result {
+    margin-top: 3px;
+    background-color: var(--popcloseBtn);
+    color: var(--popcloseBtn-text);
+    padding: 1%;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-color: linear-gradient(to bottom right, rgb(114, 172, 219), rgb(25, 86, 136));
+    cursor: pointer;
+}
+
+.pop-up, .result {
+    background-color: var(--popmsg-bkgrd);
+    color: var(--popmsg-text);
     width: 50vw;
+    max-width: 500px;
     height: fit-content;
     position: fixed;
     inset: 0;
@@ -263,16 +284,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 5px solid var(--popmsg-text);
     border-radius: 10px;
     padding: 5%;
-}
-
-.pop-up {
     opacity: 0;
     z-index: -1;
 }
 
-.pop-up.open {
+.pop-up.open, .result.calopen {
     opacity: 1;
     z-index: 999;
 }
@@ -286,11 +305,11 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0%;
+    font-family: monospace, Arial, Helvetica, sans-serif;
 }
 
 body{
     font-size: 18px;
-    font-family: monospace, Arial, Helvetica, sans-serif;
     color: var(--text-color);
     background-color: var(--bkg-color);
 }
@@ -405,7 +424,8 @@ img.home {
 img.contact-image {
     display: flex;
     margin: 30px auto;
-    width: 70vw;
+    width: 50vw;
+    max-width: 600px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
@@ -537,27 +557,31 @@ label {
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
-    color: var(--nav2-color);
-    background-color: var(--block-text-color);
+    color: var(--button-text-color);
+    background-color: var(--button-color);
     border: none;
     border-radius: 5px;
-    box-shadow: 2px 3px 5px rgb(255, 255, 255, 0.2);
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.contactBtns button:active {
+    box-shadow: none;
 }
 
 /*styling related to form validation*/
-.field input:focus, .field textarea:focus {
+.field input:focus, .field textarea:focus, .calfield input:focus {
     outline: 0;
 }
 
-.field.success input, .field.success textarea {
+.field.success input, .field.success textarea, .calfield.calsuccess input {
     border-color: #09c372;
 }
 
-.field.error input, .field.error textarea {
+.field.error input, .field.error textarea, .calfield.calerror input {
     border-color: #ff3860;
 }
 
-.field .error { /* error msg styling*/
+.field .error, .calfield .calerror { /* error msg styling*/
     color: #ff3860;
     font-size: 14px;
     font-weight: bold;
@@ -693,7 +717,11 @@ label {
     color: var(--button-text-color);
     font-weight: bold;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 5px; box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.quizBtn:active, .cal-form button:active {
+    box-shadow: none;
 }
 
 /* only cal */
