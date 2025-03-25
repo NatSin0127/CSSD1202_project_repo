@@ -37,24 +37,29 @@
             </button>
         </header>
         <main class="cal-main">
-            <form class="cal-form">
+            <form class="cal-form" id="cal-form">
                 <h2 class="cal-title">Carbon Footprint Calculator</h2>
                 <br>
                 <label for="transport">How many kilometers do you travel daily by car?</label>
-                <input type="text" id="transport" name="transport" placeholder="e.g., 123">
+                <input type="text" id="transport" name="transport" placeholder="e.g., 123" required>
                 
                 <label for="electricity">Your monthly electricity usage (in kWh):</label>
-                <input type="text" id="electricity" name="electricity" placeholder="e.g., 456">
+                <input type="text" id="electricity" name="electricity" placeholder="e.g., 456" required>
                 
                 <label for="diet">Select your diet type:</label>
-                <select id="diet" name="diet">
-                    <option>Vegetarian</option>
-                    <option>Omnivore</option>
-                    <option>Vegan</option>
+                <select id="diet" name="diet" required>
+                    <option value="">Select your diet</option>
+                    <option value="Vegetarian">Vegetarian</option>
+                    <option value="Omnivore">Omnivore</option>
+                    <option value="Vegan">Vegan</option>
                 </select>
                 <br>
-                <button type="submit">Calculate !</button>
+                <button type="submit">Calculate!</button>
             </form>
+            <div id="result" style="display:none;">
+                <h3>Your Carbon Footprint</h3>
+                <p id="result-text"></p>
+            </div>
         </main>
         <footer>
             <i><strong>Copyright&copy; 2025 Eco-Life - Certain images used on this site are licensed from Clipart.com</strong></i>
