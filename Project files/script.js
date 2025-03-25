@@ -30,6 +30,142 @@ toTop.addEventListener("click", () => {
     }
 });
 
+// Carbon Footprint Calculator
+document.addEventListener('DOMContentLoaded', () => {
+    const calculatorForm = document.querySelector('.cal-form');
+    
+    if (calculatorForm) {
+        const transportInput = document.getElementById('transport');
+        const electricityInput = document.getElementById('electricity');
+
+        transportInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9.]/g, ''); // filters input
+        });
+
+        electricityInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9.]/g, '');
+        });
+
+        calculatorForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const transportKm = parseFloat(document.getElementById('transport').value) || 0;
+            const electricityUsage = parseFloat(document.getElementById('electricity').value) || 0;
+            const diet = document.getElementById('diet').value;
+            
+            let carbonFootprint = 0;
+            const transportEmissions = transportKm * 0.192; // calc emmission
+        
+            const electricityEmissions = electricityUsage * 0.5;
+            
+            let dietEmissions = 0; // initalize diet emissions 
+            switch(diet) {
+                case 'Vegetarian':
+                    dietEmissions = 1.7; 
+                    break;
+                case 'Omnivore':
+                    dietEmissions = 3.3; 
+                    break;
+                case 'Vegan':
+                    dietEmissions = 1.0; 
+                    break;
+            }
+            
+            carbonFootprint = transportEmissions + electricityEmissions + dietEmissions;
+            
+            let resultsDiv = document.getElementById('carbon-results');
+            if (!resultsDiv) {
+                resultsDiv = document.createElement('div');
+                resultsDiv.id = 'carbon-results';
+                resultsDiv.className = 'carbon-results'; 
+                calculatorForm.appendChild(resultsDiv);
+            }
+            
+            resultsDiv.innerHTML = `
+                <h3>Your Carbon Footprint Breakdown:</h3>
+                <p>Transportation Emissions: ${transportEmissions.toFixed(2)} kg CO2</p>
+                <p>Electricity Emissions: ${electricityEmissions.toFixed(2)} kg CO2</p>
+                <p>Diet Emissions: ${dietEmissions.toFixed(2)} kg CO2</p>
+                <p><strong>Total Carbon Footprint: ${carbonFootprint.toFixed(2)} kg CO2 per day</strong></p>
+                <p>${getFootprintFeedback(carbonFootprint)}</p>
+            `;
+        });
+    }
+});
+// foot print feedback 
+function getFootprintFeedback(carbonFootprint) {
+    if (carbonFootprint < 2) {
+        return "Great job! Your carbon footprint is very low.";
+    } else if (carbonFootprint < 5) {
+        return "Not bad! There's room for improvement in reducing your carbon footprint.";
+    } else {
+        return "Your carbon footprint is quite high. Consider learning more about being eco friendly to reduce your environmental impact.";
+    }
+}
+
+// Eco-Friendly Quiz
+document.addEventListener('DOMContentLoaded', () => {
+    const quizForm = document.querySelector('.quiz-section form'); // Get quiz form
+    const quizButton = document.querySelector('.quizBtn'); // Get quiz button
+    
+    if (quizButton) {
+        quizButton.addEventListener('click', () => {
+            const correctAnswers = {
+                q1: 'b', 
+                q2: 'c', 
+                q3: 'a', 
+                q4: 'd', 
+                q5: 'true', 
+                q6: 'true', 
+                q7: 'false', 
+                q8: 'true', 
+                q9: 'true', 
+                q10: 'false',
+            };
+            
+            let score = 0;
+            let totalQuestions = Object.keys(correctAnswers).length;
+            
+            Object.keys(correctAnswers).forEach(questionId => {
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                
+                if (selectedOption && selectedOption.value === correctAnswers[questionId]) {
+                    score++;
+                }
+            });
+            
+            const percentage = Math.round((score / totalQuestions) * 100);
+            
+            let resultsDiv = document.getElementById('quiz-results');
+            if (!resultsDiv) {
+                resultsDiv = document.createElement('div');
+                resultsDiv.id = 'quiz-results';
+                resultsDiv.className = 'quiz-results'; 
+                quizForm.appendChild(resultsDiv);
+            }
+            
+            resultsDiv.innerHTML = `
+                <h3>Quiz Results</h3>
+                <p>Your Score: ${score} out of ${totalQuestions}</p>
+                <p>Percentage: ${percentage}%</p>
+                <p>${getQuizFeedback(percentage)}</p>
+            `;
+        });
+    }
+});
+
+
+function getQuizFeedback(percentage) {
+    if (percentage >= 90) {
+        return "Excellent! You have great environmental knowledge!";
+    } else if (percentage >= 70) {
+        return "Great job! You have a good understanding of how to be eco friendly.";
+    } else if (percentage >= 50) {
+        return "Not bad, but there's room for improvement. Keep learning!";
+    } else {
+        return "You might want to learn more about environmental conservation. Check out our Learn page!";
+    }
+}
+
 // contact.html: validate form inputs ------------------------------------
 const form = document.getElementById('fbk-form');
 const lastname = document.getElementById('lastname');
