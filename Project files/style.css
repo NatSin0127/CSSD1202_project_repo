@@ -245,7 +245,7 @@
 }
 
 /*contact.html: pop-up msg after submit feedback*/
-.msg, .result {
+.msg, .result, .quizresult {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -254,13 +254,13 @@
     gap: 15px;
 }
 
-.resultDiv {
+.resultDiv, .quizResDiv {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.close-pop, .close-result {
+.close-pop, .close-result, .close-quiz {
     margin-top: 3px;
     background-color: var(--popcloseBtn);
     color: var(--popcloseBtn-text);
@@ -272,13 +272,15 @@
     cursor: pointer;
 }
 
-.pop-up, .result {
+.pop-up, .result, .quizresult {
     background-color: var(--popmsg-bkgrd);
     color: var(--popmsg-text);
     width: 50vw;
     max-width: 500px;
     height: fit-content;
     position: fixed;
+    top: 0;
+    left: 0;
     inset: 0;
     margin: auto;
     display: flex;
@@ -291,7 +293,7 @@
     z-index: -1;
 }
 
-.pop-up.open, .result.calopen {
+.pop-up.open, .result.calopen, .quizresult.open {
     opacity: 1;
     z-index: 999;
 }

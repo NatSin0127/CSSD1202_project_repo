@@ -74,15 +74,13 @@ document.addEventListener('DOMContentLoaded', () => {
             
             carbonFootprint = transportEmissions + electricityEmissions + dietEmissions;
             
-            
-            
             /*if (!resultsDiv) {
                 resultsDiv = document.createElement('div');
                 resultsDiv.id = 'carbon-results';
                 resultsDiv.className = 'carbon-results'; 
                 calculatorForm.appendChild(resultsDiv);
             }*/
-            
+            const resultsDiv = document.getElementById('result-text');
             resultsDiv.innerHTML = `
                 <h3>Your Carbon Footprint Breakdown:</h3>
                 <p>Transportation Emissions: ${transportEmissions.toFixed(2)} kg CO2</p>
@@ -93,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             
         });
-        const resultsDiv = document.getElementById('result-text');
+        
         const submitResult = document.getElementById('calSubmit');
         const closeResult = document.getElementById('calClose');
         
@@ -122,7 +120,12 @@ function getFootprintFeedback(carbonFootprint) {
 document.addEventListener('DOMContentLoaded', () => {
     const quizForm = document.querySelector('.quiz-section form'); // Get quiz form
     const quizButton = document.querySelector('.quizBtn'); // Get quiz button
-    
+    const quizresult =document.getElementById('quizresult');
+    /*
+    const resultsDiv = document.getElementById('result-text');
+    const submitResult = document.getElementById('calSubmit');
+    */
+
     if (quizButton) {
         quizButton.addEventListener('click', () => {
             const correctAnswers = {
@@ -151,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const percentage = Math.round((score / totalQuestions) * 100);
             
+            /*
             let resultsDiv = document.getElementById('quiz-results');
             if (!resultsDiv) {
                 resultsDiv = document.createElement('div');
@@ -158,13 +162,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 resultsDiv.className = 'quiz-results'; 
                 quizForm.appendChild(resultsDiv);
             }
-            
+            */          
+
+            const resultsDiv = document.getElementById('quizresult-text');
             resultsDiv.innerHTML = `
                 <h3>Quiz Results</h3>
                 <p>Your Score: ${score} out of ${totalQuestions}</p>
                 <p>Percentage: ${percentage}%</p>
                 <p>${getQuizFeedback(percentage)}</p>
             `;
+            quizresult.classList.add("open");
+        });
+       
+        const closequizResult = document.getElementById('quizClose');
+        
+        closequizResult.addEventListener('click', () => {
+            quizresult.classList.remove("open");
+            quizForm.reset();
         });
     }
 });
